@@ -1,611 +1,473 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IETE-SF KCCEMSR">
-  <meta name="description" content="IETE-SF">
-  <meta name="description" content="KCCEMSR">
-  <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap">
-  <meta name="author" content="IETE-SF">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-
-  <title>IETE-ISF KCCEMSR</title>
-  <link rel="icon" href="asssets\iete_logo-removebg.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IETE-SF KCCEMSR - Institution of Electronics and Telecommunication Engineers Student Forum">
+    <meta name="keywords" content="IETE, Student Forum, Electronics, Telecommunications, KCCEMSR, Engineering">
+    <meta name="author" content="IETE-SF KCCEMSR">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="professional-styles.css">
+    
+    <title>IETE-SF KCCEMSR | Student Forum</title>
+    <link rel="icon" href="asssets/iete_logo-removebg.png" type="image/x-icon">
 </head>
 
-<body onload="myFunction()" style="background-color: #E8E9E6;">
-  <div id="loading"></div>
-
-  <div id="popUpMain" style="display: none;">
-    <div id="popup">
-      <div class="side-btn">
-        <button class="close-btn" id="closePopupBtn">&times;</button>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="/asssets/Techbate25.jpeg" class="card-img-top" alt="...">
-        <div class="card-body card-body-scrollable">
-          <p class="card-text">
-          <h5>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSehIy2AjLhtdbO_c93fiA_9QtZRbmNolWF6FgAZUGC5F5Yipw/viewform?usp=header" target="_blank"><u>Register!!!</u>
-          </h5></a></p>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading...</p>
         </div>
-      </div>
     </div>
-  </div>
-  <header>
-    <nav class="navbar navbar-expand-md navbar-light bg-light pl-5">
-      <img class="pr-4" src="asssets/iete_logo-removebg.png" alt="" width="7%" height="7%">
-      <img class="logo-right pr-4" src="asssets/kc.jpg" alt="" width="7%" height="7%">
-      <a class="navbar-brand pr-4" href="index.html" style="font-weight: 500; font-size: 30px;"><b>IETE-SF</b></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse pl-5" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto" style="font-weight: 500;">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html"><u>Home</u></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="members.html">Core-Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="gallery.html">Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo Section -->
+            <div class="nav-brand">
+                <img src="asssets/iete_logo-removebg.png" alt="IETE Logo" class="nav-logo">
+                <img src="asssets/kc.jpg" alt="KC Logo" class="nav-logo">
+                <span class="brand-text">IETE-SF</span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="members.html" class="nav-link">Core Team</a>
+                <a href="gallery.html" class="nav-link">Events</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <main role="main">
-
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0"></li>
-        <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-        <li data-target="#myCarousel" data-slide-to="5"></li>
-
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item">
-          <img class="bd-placeholder-img" id="emerging-technologies" src="asssets/Background/Emerging-Technologies.jpg"
-            alt="">
-          <div class="container">
-            <div class="carousel-caption text-right">
-              <h1>Start a New Experience</h1>
-              <p>Different Learning Spaces, Different Goals</p>
-              <p><a class="btn btn-lg btn-primary" href="gallery.html" role="button">Browse gallery</a></p>
-            </div>
-            <div class="mobile-grp-pic">
-              <div class="carousel-new">
-                <h2>Start a New Experience</h2>
-                <h5>
-                  <p>Different Learning Spaces, Different Goals</p>
-                </h5>
-                <p><a class="btn btn-lg btn-primary" href="gallery.html" role="button">Browse gallery</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item active">
-          <img class="bd-placeholder-img" id="group-img" src="/asssets/Background/Grp_pic.jpg" alt="test">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Welcome to IETE-SF</h1>
-              <p>Good Things Come to Those Who Wait, But Great Thing Come to Those Who Take Action</p>
-              <p><a class="btn btn-lg btn-primary" target="_blank" href="https://www.iete.org/IETE%20ISF%20FORUM.pdf"
-                  role="button">Learn more...</a></p>
-            </div>
-            <div class="mobile-grp-pic">
-              <div class="carousel-new">
-                <h2>Welcome to IETE-SF</h2>
-                <!-- <p>Good Things Come to Those Who Wait, But Great Thing Come to Those Who Take Action</p> -->
-                <h5>
-                  <p>"Good Things Come to Those Who Wait, But Great Thing Come to Those Who Take Action"</p>
-                </h5>
-                <p><a class="btn btn-lg btn-primary" target="_blank" href="https://www.iete.org/IETE%20ISF%20FORUM.pdf"
-                    role="button">Learn more...</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="bd-placeholder-img" id="core-img" src="asssets/Background/Core24-25.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption text-right">
-              <h1>Core Members 2024-2025</h1>
-              <p>"Teamwork divides the task and multiplies the success."</p>
-              <p><a class="btn btn-lg btn-primary" href="members.html" role="button">Core 2024-25</a></p>
-            </div>
-            <div class="mobile-grp-pic">
-              <div class="carousel-new">
-                <h2>Core Members 24-25</h2>
-                <h5>
-                  <p>"Teamwork divides the task and multiplies the success."</p>
-                </h5>
-                <p><a class="btn btn-lg btn-primary" href="members.html" role="button">Core 2024-25</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item ">
-          <img class="bd-placeholder-img" id="core-img2" src="asssets/Background/Core 2023-24.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption text-right">
-              <h1>Core Members 2023-2024</h1>
-              <p>"The way we work together determines the way we succeed."</p>
-              <p><a class="btn btn-lg btn-primary" href="oldmember.html" role="button">Core 2023-24</a></p>
-            </div>
-            <div class="mobile-grp-pic">
-              <div class="carousel-new">
-                <h2>Core Members 23-24</h2>
-                <h5>
-                  <p>"The way we work together determines the way we succeed."</p>
-                </h5>
-                <p><a class="btn btn-lg btn-primary" href="oldmember.html" role="button">Core 2023-24</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="bd-placeholder-img" id="core-img3" src="asssets/Background/Core22-23.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption text-right">
-              <h1>Core Members 2022-2023</h1>
-              <p>"Individuals make a team work, and teamwork makes individuals succeed."</p>
-              <p><a class="btn btn-lg btn-primary" href="core22-23.html" role="button">Core 2022-23</a></p>
-            </div>
-            <div class="mobile-grp-pic">
-              <div class="carousel-new">
-                <h2>Core Members 22-23</h2>
-                <h5>
-                  <p>"Individuals make a team work, and teamwork makes individuals succeed."</p>
-                </h5>
-                <p><a class="btn btn-lg btn-primary" href="core22-23.html" role="button">Core 2022-23</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item ">
-          <img class="bd-placeholder-img" id="core-img2" src="asssets/Background/core21-22 grp pic.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption text-right">
-              <h1>Core Members 2021-2022</h1>
-              <p>"The way we work together determines the way we succeed."</p>
-              <p><a class="btn btn-lg btn-primary" href="core21-22.html" role="button">Core 2021-22</a></p>
-            </div>
-            <div class="mobile-grp-pic">
-              <div class="carousel-new">
-                <h2>Core Members 21-22</h2>
-                <h5>
-                  <p>"The way we work together determines the way we succeed."</p>
-                </h5>
-                <p><a class="btn btn-lg btn-primary" href="core21-22.html" role="button">Core 2021-22</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <br>
-      <div class="color">
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="adjust">
-      <div class="card" style="width: 18rem;">
-        <img src="/asssets/trophy icon.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">About IETE-ISF KCCEMSR</h5>
-          <p class="card-text">IETE-ISF KCCEMSR is a dynamic student chapter at KCCEMSR, Thane, dedicated to fostering
-            practical learning in Electronics and Telecommunications through workshops, events, and competitions. We
-            bridge the gap between theory and real-world application.</p>
-          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="/asssets/image icon.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Our Vision & Mission</h5>
-          <p class="card-text"> <span>Vision: </span> Reaching the un-reached and empowering the youth through Technical
-            Education and Skill Development. <br> <span>Mission: </span> Advancement of Electronics, Telecommunication,
-            Information Technology & other related disciplines to contribute in Nation's Human Resource & Infrastructure
-            Development through our Engineers.</p>
-          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="/asssets/desktop icon.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Our Motto</h5>
-          <p class="card-text">"For the Students, By the Students." We champion student-driven initiatives, fostering an
-            inclusive and collaborative community where every individual eager to learn is welcomed, ensuring that every
-            experience is impactful and enriching.</p>
-          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="/asssets/earth icon.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Our Team</h5>
-          <p class="card-text">Our dedicated core team works tirelessly to create a vibrant and engaging environment.
-            Their collaborative leadership promotes growth, learning, and camaraderie, making every initiative a
-            collective success and enhancing the overall member experience.</p>
-          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-        </div>
-      </div>
-    </div>
-
-    <!-- <div class="mobile-grp-pic">
-      <div class="carousel-new">
-        <h1>Welcome to IETE-SF</h1>
-        <p>Good Things Come to Those Who Wait, But Great Thing Come to Those Who Take Action</p>
-        <p><a class="btn btn-lg btn-primary" target="_blank" href="https://www.iete.org/IETE%20ISF%20FORUM.pdf"
-            role="button">Learn more...</a></p>
-      </div>
-    </div> 
-    <hr class="featurette-divider">-->
-
-    <!--<div class="container heading mt-3">
-      <p style="text-align: center;font-size: 60px;font-weight: 500;"><u>Events</u></p>
-    </div>
-
-    <div class="container marketing mt-5">
-
-      <div class="row featurette">
-        <div class="col-md-7 order-md-2 mt-5">
-          <h2 class="featurette-heading" style="font-weight: 500;">Poster Making Competition </h2><br>
-          <span class="text-muted" style="font-size: large;font-weight:500;">Make something smart.</span>
-          <p class="lead" style="font-size: medium;"><u><b>Topic</b></u> : Emerging Technologies in INDIA.<br>Show your
-            productivity and win assured prizes.<br><br><a class="btn btn-lg btn-primary" target="_blank"
-              href="https://forms.gle/hV9pk2ctYdyxjnim6" role="button">Register Now </a>
-          </p>
-          <p style="font-size: small;"><b>*NOTE :- Only for SE, TE, BE Students.</b></p>
-        </div>
-        <div class="col-md-5 order-md-1">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400"
-            height="400" src="asssets/Event/event7.jpg" alt="event7">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 mt-5">
-          <h2 class="featurette-heading" style="font-weight: 500;">Pitchers Tank </h2><br>
-          <span class="text-muted" style="font-size: large;font-weight:500;">Where idea meets reality.</span>
-          <p class="lead" style="font-size: small;">The motive of the competition was to focus on the practical
-            implementations of innovative ideas of students and giving an opportunity to young entrepreneurs to showcase
-            their talents & encourage them to test their skills.
-            Prof. Yogesh Karunakar and Mr. Sagar Bhosle, Director of MFC Restaurants were the judges for the
-            competition.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400"
-            height="400" src="asssets/Event/event2.jpg" alt="event2">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 order-md-2 mt-5">
-          <h2 class="featurette-heading" style="font-weight: 500;">Automation Industry Webinar </h2><br>
-          <span class="text-muted" style="font-size: large;font-weight:500;">Build something smart.</span>
-          <p class="lead" style="font-size: small;">Mr. Rajesh gave the introduction on Automation Industry and gave an
-            overview on working and process of different automated machines he designed in the industrial projects.
-            he explained the working of Electrical motor, VFD, PLCs and HMI/SCADA software by animated videos and
-            introduced us the recent technologies used in Industrial Automation and different job opportunities for an
-            Automation Engineer in Industrial Sector.</p>
-        </div>
-        <div class="col-md-5 order-md-1">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400"
-            height="400" src="asssets/Event/event3.jpeg" alt="event3">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 mt-5">
-          <h2 class="featurette-heading" style="font-weight: 500;">Swayam Kalam </h2><br>
-          <span class="text-muted" style="font-size: large;font-weight:500;">Present your view.</span>
-          <p class="lead" style="font-size: small;">The participants were divided into two groups where the judges in
-            each group evaluated them on the basis of their presentation skills, confidence, clarity and content.
-            Twelve teams across different institutes have participated and gave captivating presentations. Each team was
-            given 7 minutes to present their PPT’s on any one of the topics given and 1 minute for question-and-answer
-            session. </p>
-        </div>
-        <div class="col-md-5">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400"
-            height="400" src="asssets/Event/event4.jpeg" alt="event4">
-        </div>
-      </div>-->
-
-    <!-- magzine showcase-->
-    <hr class="featurette-divider">
-
-    <div class="row featurette mt-2 md-5">
-      <div class="container" style="text-align: center; ">
-        <a class="btn btn-lg btn-primary blink" target="_blank"
-          href="https://drive.google.com/file/d/1jRX7cqTsAG5bxQF8MMkI7ZlYd9uM1uVO/view?usp=sharing"
-          role="button">IETE-SF Magazine 2023-2024.
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-gift-fill"
-            viewBox="0 0 16 16">
-            <path
-              d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z" />
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette mt-2 md-5">
-      <div class="container" style="text-align: center; ">
-        <a class="btn btn-lg btn-primary blink" target="_blank"
-          href="https://drive.google.com/file/d/1Kc0WsJR2vkT4L1HVYjzIMlmBWuqQoySL/view?usp=sharing"
-          role="button">IETE-SF Magazine 2022-2023.
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-gift-fill"
-            viewBox="0 0 16 16">
-            <path
-              d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z" />
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette mt-2 md-5">
-      <div class="container" style="text-align: center; ">
-        <a class="btn btn-lg btn-primary blink" target="_blank"
-          href="https://drive.google.com/file/d/1spszDiDcaYlD9a4wvyR_7U60vOb13IfU/view?usp=sharing"
-          role="button">IETE-SF Magazine 2021-2022.
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-gift-fill"
-            viewBox="0 0 16 16">
-            <path
-              d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z" />
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="container heading mt-3 animated-heading-container">
-      <p style="text-align: center;font-size: 60px;font-weight: 500;"><u>Reviews</u></p>
-    </div>
-
-    <div class="container">
-      <div class="testimonial-carousel">
-        <div id="myCarousel1" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ul class="carousel-indicators">
-            <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel1" data-slide-to="1"></li>
-            <li data-target="#myCarousel1" data-slide-to="2"></li>
-            <li data-target="#myCarousel1" data-slide-to="3"></li>
-            <li data-target="#myCarousel1" data-slide-to="4"></li>
-
-          </ul>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="box">
-                <img class="testimonial-image" src="asssets/Review/Vimlendu.jpeg" alt="Testimonial Image 1" />
-              </div>
-              <h4 class="testimonial-name">Vimlendu Yadav</h4>
-              <div class="stars">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-              </div>
-              <p class="testimonial-quote">"The Core committee members of IETE- SF showed incredible leadership
-                instincts in their work on all project. I love to work with them to develop
-                those skills. Amazing work. I hope they might consider taking them to the
-                next level by leading our next big project in the IETE - SF committee."</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="hero-slide active" data-bg="asssets/Background/Grp_pic.jpg">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="hero-text">
+                            <h1 class="hero-title">Welcome to IETE-SF</h1>
+                            <p class="hero-subtitle">Institution of Electronics and Telecommunication Engineers - Student Forum</p>
+                            <p class="hero-description">Empowering students through practical learning, innovation, and technical excellence in Electronics and Telecommunications.</p>
+                            <div class="hero-actions">
+                                <a href="https://www.iete.org/IETE%20ISF%20FORUM.pdf" target="_blank" class="btn btn-primary">
+                                    Learn More
+                                </a>
+                                <a href="gallery.html" class="btn btn-outline">
+                                    View Events
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="carousel-item">
-              <div class="box">
-                <img class="testimonial-image" src="asssets/Review/Manas.jpeg" alt="Testimonial Image 2" />
-              </div>
-              <h4 class="testimonial-name">Manas Gadge</h4>
-              <div class="stars">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9734;</span>
-              </div>
-              <p class="testimonial-quote">"IETE -SF gives us the advantages to develop our skills. And it also gives
-                an
-                opportunity to work on a big platform and also it conducts big project and
-                all the seniors and members are helpful and kind and also they are
-                supportive and hardworking. I enjoy working with IETE -SF"</p>
+            <!-- Slide 2 -->
+            <div class="hero-slide" data-bg="asssets/Background/Core24-25.jpg">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="hero-text">
+                            <h1 class="hero-title">Core Team 2024-25</h1>
+                            <p class="hero-subtitle">Leadership • Innovation • Excellence</p>
+                            <p class="hero-description">Meet our dedicated team of leaders driving innovation and fostering growth in our student community.</p>
+                            <div class="hero-actions">
+                                <a href="members.html" class="btn btn-primary">
+                                    Meet Our Team
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="carousel-item">
-              <div class="box">
-                <img class="testimonial-image" src="asssets/Review/Patole.jpg" alt="Testimonial Image 1" />
-              </div>
-              <h4 class="testimonial-name">Harsh Patole</h4>
-              <div class="stars">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9734;</span>
-              </div>
-              <p class="testimonial-quote">"IETE-SF KCCEMSR is more than a group; it's a supportive family where
-                everyone can grow and succeed. The focus on practical education and knowledge sharing truly transforms
-                our students’ lives and fosters a strong sense of community."</p>
+            <!-- Slide 3 -->
+            <div class="hero-slide" data-bg="asssets/Background/Emerging-Technologies.jpg">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="hero-text">
+                            <h1 class="hero-title">Emerging Technologies</h1>
+                            <p class="hero-subtitle">Innovation • Research • Future</p>
+                            <p class="hero-description">Exploring cutting-edge technologies and preparing students for the future of engineering.</p>
+                            <div class="hero-actions">
+                                <a href="gallery.html" class="btn btn-primary">
+                                    Explore Events
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="carousel-item">
-              <div class="box">
-                <img class="testimonial-image" src="asssets/Review/Avinash.jpeg" alt="Testimonial Image 2" />
-              </div>
-              <h4 class="testimonial-name">Avinash Rajak</h4>
-              <div class="stars">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-              </div>
-              <p class="testimonial-quote">"IETE-SF KCCEMSR is not merely a forum; it is a family where each member is
-                valued and given the opportunity to grow and thrive. We are proud of our achievements and it has
-                allowed me to witness the impact of knowledge sharing and the transformative effect that practical
-                education can have on students."</p>
+            <!-- Slide 4 -->
+            <div class="hero-slide" data-bg="asssets/Background/Core 2023-24.jpg">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="hero-text">
+                            <h1 class="hero-title">Our Legacy</h1>
+                            <p class="hero-subtitle">Excellence • Achievement • Growth</p>
+                            <p class="hero-description">Building on years of success and continuous improvement in technical education and student development.</p>
+                            <div class="hero-actions">
+                                <a href="oldmember.html" class="btn btn-primary">
+                                    View Alumni
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="carousel-item">
-              <div class="box">
-                <img class="testimonial-image" src="asssets/Review/Shivanand.jpeg" alt="Testimonial Image 1" />
-              </div>
-              <h4 class="testimonial-name">Shivanand Shetye</h4>
-              <div class="stars">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-              </div>
-              <p class="testimonial-quote">"IETE-SF KCCEMSR is a supportive community that helps us grow and learn
-                together. It's a place where knowledge and ideas are shared, and everyone has the opportunity to
-                succeed."</p>
-            </div>
-            <div class="color">
-              <a class="carousel-control-prev" href="#myCarousel1" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#myCarousel1" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
-
         </div>
 
-      </div>
-    </div>
+        <!-- Hero Navigation -->
+        <button class="hero-nav prev" id="hero-prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="hero-nav next" id="hero-next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
 
-    <hr class="featurette-divider">
+        <!-- Hero Indicators -->
+        <div class="hero-indicators">
+            <button class="indicator active" data-slide="0"></button>
+            <button class="indicator" data-slide="1"></button>
+            <button class="indicator" data-slide="2"></button>
+            <button class="indicator" data-slide="3"></button>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About IETE-SF KCCEMSR</h2>
+                <p class="section-subtitle">Fostering excellence in electronics and telecommunications education</p>
+            </div>
 
-    <!-- /END THE FEATURETTES -->
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Our Excellence</h3>
+                    <p>IETE-ISF KCCEMSR is a dynamic student chapter dedicated to fostering practical learning in Electronics and Telecommunications through workshops, events, and competitions. We bridge the gap between theory and real-world application.</p>
+                </div>
 
-    </div>
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Vision & Mission</h3>
+                    <p><strong>Vision:</strong> Reaching the un-reached and empowering youth through Technical Education.<br><br><strong>Mission:</strong> Advancement of Electronics, Telecommunication, and IT disciplines for nation's development.</p>
+                </div>
 
-    <!-- /.container -->
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Approach</h3>
+                    <p>"For the Students, By the Students." We champion student-driven initiatives, fostering an inclusive community where every individual eager to learn is welcomed and supported.</p>
+                </div>
 
-    <!-- FOOTER -->
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Our Community</h3>
+                    <p>Our dedicated team works tirelessly to create a vibrant environment. Their collaborative leadership promotes growth, learning, and camaraderie, making every initiative successful.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label">Active Members</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Events Organized</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-label">Best ISF Awards</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="6">0</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="publications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Publications</h2>
+                <p class="section-subtitle">Annual magazines showcasing our achievements and insights</p>
+            </div>
+
+            <div class="publications-grid">
+                <div class="publication-card">
+                    <div class="publication-year">2023-24</div>
+                    <div class="publication-content">
+                        <h3>IETE-SF Magazine</h3>
+                        <p>Latest edition featuring achievements, events, and student contributions from the academic year 2023-24.</p>
+                        <a href="https://drive.google.com/file/d/1jRX7cqTsAG5bxQF8MMkI7ZlYd9uM1uVO/view?usp=sharing" target="_blank" class="publication-link">
+                            <i class="fas fa-download"></i>
+                            Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-year">2022-23</div>
+                    <div class="publication-content">
+                        <h3>IETE-SF Magazine</h3>
+                        <p>Previous year's highlights and technical articles from our vibrant community of students and faculty.</p>
+                        <a href="https://drive.google.com/file/d/1Kc0WsJR2vkT4L1HVYjzIMlmBWuqQoySL/view?usp=sharing" target="_blank" class="publication-link">
+                            <i class="fas fa-download"></i>
+                            Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-year">2021-22</div>
+                    <div class="publication-content">
+                        <h3>IETE-SF Magazine</h3>
+                        <p>Foundation year achievements and inaugural events documentation marking our journey's beginning.</p>
+                        <a href="https://drive.google.com/file/d/1spszDiDcaYlD9a4wvyR_7U60vOb13IfU/view?usp=sharing" target="_blank" class="publication-link">
+                            <i class="fas fa-download"></i>
+                            Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Student Testimonials</h2>
+                <p class="section-subtitle">Hear from our community members about their experiences</p>
+            </div>
+
+            <div class="testimonials-container">
+                <div class="testimonial-slider" id="testimonial-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"The Core committee members of IETE-SF showed incredible leadership instincts in their work on all projects. I love to work with them to develop those skills. Amazing work."</p>
+                            <div class="testimonial-author">
+                                <img src="asssets/Review/Vimlendu.jpeg" alt="Vimlendu Yadav">
+                                <div class="author-info">
+                                    <h4>Vimlendu Yadav</h4>
+                                    <span>Former Core Member</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"IETE-SF gives us advantages to develop our skills and provides opportunities to work on a big platform. All members are helpful, supportive, and hardworking."</p>
+                            <div class="testimonial-author">
+                                <img src="asssets/Review/Manas.jpeg" alt="Manas Gadge">
+                                <div class="author-info">
+                                    <h4>Manas Gadge</h4>
+                                    <span>Technical Head</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"IETE-SF KCCEMSR is more than a group; it's a supportive family where everyone can grow and succeed. The focus on practical education truly transforms students' lives."</p>
+                            <div class="testimonial-author">
+                                <img src="asssets/Review/Patole.jpg" alt="Harsh Patole">
+                                <div class="author-info">
+                                    <h4>Harsh Patole</h4>
+                                    <span>Content Head</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"IETE-SF is a family where each member is valued and given the opportunity to grow. It has allowed me to witness the transformative effect of practical education."</p>
+                            <div class="testimonial-author">
+                                <img src="asssets/Review/Avinash.jpeg" alt="Avinash Rajak">
+                                <div class="author-info">
+                                    <h4>Avinash Rajak</h4>
+                                    <span>Former Chairman</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="testimonial-nav">
+                    <button class="nav-btn prev" id="testimonial-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-btn next" id="testimonial-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join Our Community</h2>
+                <p>Be part of India's leading student forum for Electronics and Telecommunications</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                    <a href="gallery.html" class="btn btn-outline">View Events</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-      <div class="footer-content">
-        <p>©2024 IETE-SF, KCCEMSR, Thane.<br>
-          <span style="font-weight: 500; font-size: 15px;">
-            Developed by: Rohit Rathod<br>
-            <span>Contact me: </span>
-            <!-- LinkedIn Icon (Optional) -->
-            <a class="ml-2" href="https://www.linkedin.com/in/rohit-rathod-2715rr/" target="_blank">
-              <i class="fab fa-linkedin icon"></i>
-            </a>
-            <!-- Email Icon -->
-            <a class="ml-2" href="mailto:rohitrathod2815@gmail.com">
-              <i class="fas fa-envelope icon"></i>
-            </a>
-          </span>
-        </p>
-      </div>
-      <div class="footer-buttons">
-        <p class="back-to-top-container">
-          <a href="#" class="back-to-top">Back to top</a>
-        </p>
-        <p class="contributor-container">
-          <a href="thanks.html" class="contributor">Contributor</a>
-        </p>
-      </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="asssets/iete_logo-removebg.png" alt="IETE Logo">
+                        <h3>IETE-SF KCCEMSR</h3>
+                        <p>Empowering the next generation of engineers through practical learning and innovation in Electronics and Telecommunications.</p>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="members.html">Core Team</a></li>
+                        <li><a href="gallery.html">Events</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://drive.google.com/file/d/1jRX7cqTsAG5bxQF8MMkI7ZlYd9uM1uVO/view?usp=sharing" target="_blank">Latest Magazine</a></li>
+                        <li><a href="https://www.iete.org/IETE%20ISF%20FORUM.pdf" target="_blank">IETE Guidelines</a></li>
+                        <li><a href="thanks.html">Contributors</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> iete@kccemsr.edu.in</p>
+                        <p><i class="fas fa-phone"></i> +91 80973 64212</p>
+                        <p><i class="fas fa-map-marker-alt"></i> KCCEMSR, Thane</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/iete_sf_kccemsr/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:iete@kccemsr.edu.in" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/iete-sf-kccemsr" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 IETE-SF, KCCEMSR, Thane. All rights reserved.</p>
+                    <div class="developer-credit">
+                        <span>Developed by: </span>
+                        <a href="https://www.linkedin.com/in/rohit-rathod-2715rr/" target="_blank">Rohit Rathod</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
+    <!-- Event Popup -->
+    <div id="event-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" id="popup-close" aria-label="Close popup">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-body">
+                <img src="/asssets/Techbate25.jpeg" alt="Techbate 2025">
+                <div class="popup-text">
+                    <h3>Techbate 2025</h3>
+                    <p>Join us for the most exciting technical debate competition of the year!</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSehIy2AjLhtdbO_c93fiA_9QtZRbmNolWF6FgAZUGC5F5Yipw/viewform?usp=header" target="_blank" class="btn btn-primary">
+                        Register Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-  </main>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-
-  <!-- for popup -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-    var preloader = document.getElementById("loading");
-    function myFunction() {
-      preloader.style.display = "none";
-    };
-
-    $(document).ready(function () {
-      setTimeout(function () {
-        $('#popUpMain').css('display', 'block');
-      }, 5000);
-    });
-
-    $('.close-btn').click(function () {
-      $('#popUpMain').css('display', 'none');
-    });
-
-  </script>
-
-
+    <script src="professional-scripts.js"></script>
 </body>
 
 </html>
