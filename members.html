@@ -9,388 +9,328 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="members-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <title>IETE-ISF Members</title>
-    <link rel="icon" href="asssets\iete_logo-removebg.png" type="image/x-icon">
+    <title>Core Team - IETE-SF</title>
+    <link rel="icon" href="assets/iete_logo-removebg.png" type="image/x-icon">
 </head>
 
 <body style="background-color: #E8E9E6;">
-    <header>
-        <nav class="navbar navbar-expand-md navbar-light bg-light pl-5">
-            <img class="pr-4" src="asssets/iete_logo-removebg.png" alt="" width="7%" height="7%">
-            <img class="logo-right pr-4" src="asssets/kc.jpg" alt="" width="7%" height="7%">
-            <a class="navbar-brand pr-4" href="index.html" style="font-weight: 500; font-size: 30px;"><b>IETE-SF</b></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="asssets/iete_logo-removebg.png" alt="IETE Logo" class="nav-logo">
+                <img src="asssets/kc.jpg" alt="KC Logo" class="nav-logo">
+                <span class="brand-text">IETE-SF</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="members.html" class="nav-link active">Core Team</a>
+                <a href="gallery.html" class="nav-link">Events</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <div class="collapse navbar-collapse pl-5" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto" style="font-weight: 500;">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="members.html"><u>Core-Team</u></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="gallery.html">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <hr class="featurette-divider">
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <!-- Buttons -->
-    <div class="buttons">
-        <div class="contains-buttons">
-            <div class="container">
-                <div class="carousel-captiontext-right1">
-                    <p><a class="btn btn-lg btn-primary" href="oldmember.html" role="button">Core team 2023-24</a></p>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Our Core Team</h1>
+            <p class="hero-subtitle">Meet the dedicated leaders driving innovation and excellence</p>
+        </div>
+    </section>
+
+    <!-- Year Navigation -->
+    <section class="year-nav">
+        <div class="container">
+            <div class="year-buttons">
+                <a href="members.html" class="year-btn active">2024-25</a>
+                <a href="oldmember.html" class="year-btn">2023-24</a>
+                <a href="core22-23.html" class="year-btn">2022-23</a>
+                <a href="core21-22.html" class="year-btn">2021-22</a>
             </div>
-            <div class="container">
-                <div class="carousel-captiontext-right1">
-                    <p><a class="btn btn-lg btn-primary" href="core22-23.html" role="button">Core team 2022-23</a></p>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section class="faculty-section">
+        <div class="container">
+            <h2 class="section-title">Faculty Leadership</h2>
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <div class="faculty-image">
+                        <img src="asssets/Faculty/Rindhe Sir.jpeg" alt="Dr. Baban U. Rindhe">
+                    </div>
+                    <div class="faculty-info">
+                        <h3 class="faculty-name">Dr. Baban U. Rindhe</h3>
+                        <p class="faculty-title">ISF Convener & Head of EXTC Dept.</p>
+                        <p class="faculty-description">Leading IETE-SF since 2018, our center has won the Best ISF Award for three consecutive years (2020-23) under his guidance.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="carousel-captiontext-right1">
-                    <p><a class="btn btn-lg btn-primary" href="core21-22.html" role="button">Core team 2021-22</a></p>
+                <div class="faculty-card">
+                    <div class="faculty-image">
+                        <img src="asssets/Faculty/Purnima Maam.png" alt="Asst.Prof. Purnima Vadak">
+                    </div>
+                    <div class="faculty-info">
+                        <h3 class="faculty-name">Asst.Prof. Purnima Vadak</h3>
+                        <p class="faculty-title">Faculty Coordinator, EXTC Department</p>
+                        <p class="faculty-description">Instrumental in organizing numerous successful events and maintaining our award-winning status through dedicated mentorship.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <hr class="featurette-divider">
+    </section>
 
-        <!-- <div class="container pt-4 animated-heading-container">
-            <h1 class="animated-heading"><u>IETE - SF Convener Message</u></h1>
-        </div><br> -->
-
-        <div class="container pt-4 animated-heading-container">
-            <h1 style="text-align:center;"><u>IETE - SF Convener Message</u></h1>
-        </div><br>
-
-
-        <div class="container pt-5">
-
-            <div class="row featurette p-3">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Dr. Baban U. Rindhe<br><span class="text-muted"
-                            style="font-size: 30px;">Immdt. Past Chairman, IETE Navi Mumbai, Head of EXTC Dept. & ISF
-                            Convener.</span></h2>
-                    <p class="lead">"In November 2018, we established the IETE Students Forum (ISF) at K.C. College of
-                        Engineering & Management Studies & Research. Our ISF Centre won the prestigious Best ISF Award
-                        for 2020-21, 2021-22 and 2022-23, thanks to the dedication of Ms. Purnima Vadak and our ISF
-                        Team. We are committed to advancing innovative educational methods and look forward to achieving
-                        even greater milestones in the future. Thank you for your support and dedication."</p>
-                </div>
-                <div class="box">
-                    <div class="col-md-5">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto rounded-circle"
-                            width="250" height="250" src="asssets/Faculty/Rindhe Sir.jpeg" alt="event4">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="container pt-4 animated-heading-container">
-                <h1 style="text-align:center;"><u>IETE - SF Faculty Co-ordinator message</u></h1>
-            </div><br>
-
-            <div class="row featurette p-3">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Asst.Prof. Purnima vadak <br><span class="text-muted"
-                            style="font-size: 30px;">EXTC Department</span></h2>
-                    <p class="lead">"It brings me immense joy to have guided talented students as a Faculty Coordinator
-                        at K. C. College of Engineering & Management Studies & Research. Our ISF team has organized
-                        numerous events, earning the Best ISF Award for 2020-21, 2021-22 and 2022-23. This success is
-                        due to the support of Dr. Baban U. Rindhe and our institutional leadership. I eagerly anticipate
-                        ISF's continued growth in 2024-25.</p>
-                </div>
-                <div class="box">
-                    <div class="col-md-5 order-md-1">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto rounded-circle"
-                            width="250" height="250" src="/asssets/Faculty/Purnima Maam.png" alt="event4">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <!-- <div class="container pt-4 animated-heading-container">
-                <h1 style="text-align:center;"><u>Core Team 2024-2025</u></h1>
-            </div><br> -->
-
-            <div class="container pt-4 animated-heading-container">
-                <h1 class="animated-heading"><u>Core Team 24-25</u></h1>
-            </div><br>
-
-            <div class="row featurette p-3">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading"> Janhvi Arya<br><span class="text-muted"
-                            style="font-size: 30px;">Chairman</span></h2>
-                    <p class="lead">"With immense pride and gratitude, I reflect on the success of another year for the
-                        IETE Student Forum. Throughout this period, we have consistently organized outstanding technical
-                        events and webinars, offering invaluable practical knowledge and countless opportunities for our
-                        students to excel. As Chairman, it is an honor to lead such a dedicated team. Together, we have
-                        experienced the transformative power of knowledge sharing and hands-on education within our
-                        student community."</p>
-                </div>
-                <div class="box">
-                    <div class="col-md-5">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto rounded-circle"
-                            width="250" height="250" src="asssets/Core/Janhvi.jpeg" alt="event4">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette p-3">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Paramjot Singh Labana <br><span class="text-muted"
-                            style="font-size: 30px;">Vice-Chairman</span></h2>
-                    <p class="lead">"It is with immense pleasure that I address you as the Vice Chairman of IETE-SF. In
-                        this role, we have evolved into more than just a forum; we are a supportive family where every
-                        member is valued and encouraged to excel. I am incredibly proud of the progress we have made
-                        together and the milestones we have achieved. Our efforts have not only led to impactful events
-                        but also created a rich platform for learning, collaboration, and personal development."</p>
-                </div>
-                <div class="box">
-                    <div class="col-md-5 order-md-1">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto rounded-circle"
-                            width="250" height="250" src="/asssets/Core/Vice.jpeg" alt="event4">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette p-3">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Manasvi Kamble <br><span class="text-muted"
-                            style="font-size: 30px;">Secretary</span></h2>
-                    <p class="lead">"Reflecting on my role as Secretary in the IETE Student Forum fills me with
-                        privilege and gratitude. This role has been incredibly rewarding, offering numerous learning
-                        opportunities and helping me build a diverse skill set. Collaborating with such a skilled and
-                        committed team has greatly contributed to my personal and professional development. The
-                        experience has enhanced my organizational skills and underscored the value of effective
-                        communication, teamwork, and leadership."</p>
-                </div>
-                <div class="box">
-                    <div class="col-md-5">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto rounded-circle"
-                            width="250" height="250" src="asssets/Core/Manasavi.jpeg" alt="event4">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette p-3">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Amaan Rakhangi <br><span class="text-muted"
-                            style="font-size: 30px;">Treasurer</span></h2>
-                    <p class="lead">"Being the Treasurer of IETE-SF has been a highly fulfilling experience. It has
-                        equipped me with crucial skills and hands-on knowledge in managing finances, budgeting, and
-                        overseeing funds. Handling our organization's financial matters has sharpened my skills and
-                        highlighted the importance of financial responsibility and transparency."</p>
-                </div>
-                <div class="box">
-                    <div class="col-md-5 order-md-1">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto rounded-circle"
-                            width="250" height="250" src="asssets/Core/Amaan.jpeg" alt="event4">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette p-3">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Kranti Davkhar <br><span class="text-muted"
-                            style="font-size: 30px;">Marketing and Sponsorship Head</span></h2>
-                    <p class="lead">"IETE is a technical forum that offers numerous opportunities for personal growth.
-                        As the marketing and sponsorship head, I've gained valuable insights into marketing strategies
-                        through organizing various technical events. IETE has been instrumental in enhancing my skills
-                        and knowledge in the field."</p>
-                </div>
-                <div class="box">
-                    <div class="col-md-5">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto rounded-circle"
-                            width="250" height="250" src="asssets/Core/Kranti.jpeg" alt="event4">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette p-3">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Nikhil Chaudhari<br><span class="text-muted"
-                            style="font-size: 30px;">Technical Head</span></h2>
-                    <p class="lead">Serving as the Technical Head has been deeply rewarding. This role has enabled me to
-                        showcase my technical expertise while also developing my leadership and organizational skills.
-                        Our initiatives aim to foster a dynamic environment where creativity and ideas can thrive."</p>
-                </div>
-                <div class="box">
-                    <div class="col-md-5">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto rounded-circle"
-                            width="250" height="250" src="asssets/Core/Tech-Head.jpeg" alt="event4">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette p-3">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Mehreen Sayed Gulam Husain <br><span class="text-muted"
-                            style="font-size: 30px;">Technical Co-Head</span></h2>
-                    <p class="lead">"As the Technical Co-head of IETE-SF, I have immersed myself in tackling technical
-                        challenges and exploring innovative solutions. Working alongside talented peers has expanded my
-                        perspectives and refined my problem-solving skills. Additionally, planning and executing
-                        initiatives has provided me with invaluable leadership and organizational experience."</p>
-                </div>
-                <div class="box">
-                    <div class="col-md-5">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto rounded-circle"
-                            width="250" height="250" src="asssets/Core/Mehreen.jpeg" alt="event4">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette p-3">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Tanay Keer <br><span class="text-muted"
-                            style="font-size: 30px;">Digital Marketing Head</span></h2>
-                    <p class="lead">"As Digital Marketing Head, I’ve been honored to work with a highly skilled and
-                        committed team that continually goes above and beyond. Our group exemplifies exceptional
-                        teamwork and dedication, focusing on achieving our collective objectives. We’ve leveraged
-                        innovative strategies and digital platforms to effectively enhance our message and connect with
-                        our community."</p>
-                </div>
-                <div class="box">
-                    <div class="col-md-5">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto rounded-circle"
-                            width="250" height="250" src="asssets/Core/Tanay.jpeg" alt="event4">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette p-3">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Aarti Kedari <br><span class="text-muted"
-                            style="font-size: 30px;">Digital Marketing Co-Head</span></h2>
-                    <p class="lead">"As Digital Marketing Head, I’ve been fortunate to work with a remarkably skilled
-                        and committed team that consistently exceeds expectations. Our collaboration and dedication are
-                        evident in our pursuit of shared objectives. We’ve effectively used innovative strategies and
-                        digital platforms to enhance our message and connect with our community."</p>
-                </div>
-                <div class="box">
-                    <div class="col-md-5">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto rounded-circle"
-                            width="250" height="250" src="asssets/Core/Aarti.jpeg" alt="event4">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette p-3">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Saima Khan <br><span class="text-muted"
-                            style="font-size: 30px;">Anchoring and Content Writing Head</span></h2>
-                    <p class="lead">"As the Content Writing & Anchoring Head, I've found the experience to be deeply
-                        fulfilling. This role has allowed me to play a key part in our dynamic community by organizing a
-                        variety of events and activities. It has improved my content creation and presentation skills
-                        and provided significant opportunities for personal and academic growth. We've successfully
-                        created an engaging platform where creativity and talent are celebrated."</p>
-                </div>
-                <div class="box">
-                    <div class="col-md-5">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto rounded-circle"
-                            width="250" height="250" src="asssets/Core/Saima.jpeg" alt="event4">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette p-3">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Savleen Kaur <br><span class="text-muted"
-                            style="font-size: 30px;">Anchoring and Content Writing Co-Head</span></h2>
-                    <p class="lead">"As the Content Writing & Anchoring Co-Head, I had the honor of
-                        shaping our community through a variety of engaging events and activities. These efforts
-                        have not only enhanced our collective experience but also provided meaningful chances for
-                        personal and academic development. They have refined our skills, inspired creativity, and
-                        built enduring connections."</p>
-                </div>
-                <div class="box">
-                    <div class="col-md-5">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto rounded-circle"
-                            width="250" height="250" src="asssets/Core/Savleen.jpeg" alt="event4">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
+    <!-- Core Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Core Team 2024-25</h2>
+            <div class="team-grid">
+    <!-- Chairman -->
+    <div class="member-card featured">
+        <div class="member-image">
+            <img src="./asssets/Core/Janhvi.jpeg" alt="Janhvi Arya">
+            <div class="member-badge">Chairman</div>
         </div>
+        <div class="member-info">
+            <h3 class="member-name">Janhvi Arya</h3>
+            <p class="member-role">Chairman</p>
+            <p class="member-quote">Leading our dedicated team to organize outstanding technical events and create transformative learning experiences.</p>
+            <div class="member-skills">
+                <span class="skill-tag">Leadership</span>
+                <span class="skill-tag">Events</span>
+            </div>
+        </div>
+    </div>
 
-        <!-- FOOTER -->
-        <footer class="footer">
+    <!-- Vice Chairman -->
+    <div class="member-card featured">
+        <div class="member-image">
+            <img src="./asssets/man.png" alt="Paramjot Singh Labana">
+            <div class="member-badge">Vice Chairman</div>
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Paramjot Singh Labana</h3>
+            <p class="member-role">Vice Chairman</p>
+            <p class="member-quote">Building a supportive family where every member is valued and encouraged to excel.</p>
+            <div class="member-skills">
+                <span class="skill-tag">Support</span>
+                <span class="skill-tag">Growth</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secretary -->
+    <div class="member-card">
+        <div class="member-image">
+            <img src="./asssets/Core/Manasavi.jpeg" alt="Manasvi Kamble">
+            <div class="member-badge">Secretary</div>
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Manasvi Kamble</h3>
+            <p class="member-role">Secretary</p>
+            <p class="member-quote">Enhancing organizational skills while fostering effective communication and teamwork.</p>
+            <div class="member-skills">
+                <span class="skill-tag">Organization</span>
+                <span class="skill-tag">Communication</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Treasurer -->
+    <div class="member-card">
+        <div class="member-image">
+            <img src="./asssets/Core/Amaan.jpeg" alt="Amaan Rakhangi">
+            <div class="member-badge">Treasurer</div>
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Amaan Rakhangi</h3>
+            <p class="member-role">Treasurer</p>
+            <p class="member-quote">Managing finances with transparency while developing crucial budgeting skills.</p>
+            <div class="member-skills">
+                <span class="skill-tag">Finance</span>
+                <span class="skill-tag">Planning</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technical Head -->
+    <div class="member-card">
+        <div class="member-image">
+            <img src="./asssets/man.png" alt="Nikhil Chaudhari">
+            <div class="member-badge">Technical Head</div>
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Nikhil Chaudhari</h3>
+            <p class="member-role">Technical Head</p>
+            <p class="member-quote">Creating dynamic environments where technical creativity and innovative ideas flourish.</p>
+            <div class="member-skills">
+                <span class="skill-tag">Technical</span>
+                <span class="skill-tag">Innovation</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technical Co-Head -->
+    <div class="member-card">
+        <div class="member-image">
+            <img src="./asssets/man.png" alt="Mehreen Sayed">
+            <div class="member-badge">Technical Co-Head</div>
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Mehreen Sayed</h3>
+            <p class="member-role">Technical Co-Head</p>
+            <p class="member-quote">Tackling technical challenges and exploring innovative solutions effectively.</p>
+            <div class="member-skills">
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Innovation</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Marketing Head -->
+    <div class="member-card">
+        <div class="member-image">
+            <img src="./asssets/Core/Kranti.jpeg" alt="Kranti Davkhar">
+            <div class="member-badge">Marketing Head</div>
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Kranti Davkhar</h3>
+            <p class="member-role">Marketing & Sponsorship Head</p>
+            <p class="member-quote">Gaining valuable insights into marketing strategies while organizing technical events.</p>
+            <div class="member-skills">
+                <span class="skill-tag">Marketing</span>
+                <span class="skill-tag">Sponsorship</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Digital Marketing Head -->
+    <div class="member-card">
+        <div class="member-image">
+            <img src="./asssets/Core/Tanay.jpeg" alt="Tanay Keer">
+            <div class="member-badge">Digital Marketing</div>
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Tanay Keer</h3>
+            <p class="member-role">Digital Marketing Head</p>
+            <p class="member-quote">Leveraging innovative digital strategies to enhance our message and community reach.</p>
+            <div class="member-skills">
+                <span class="skill-tag">Digital</span>
+                <span class="skill-tag">Strategy</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Digital Marketing Co-Head -->
+    <div class="member-card">
+        <div class="member-image">
+            <img src="./asssets/Core/Aarti.jpeg" alt="Aarti Kedari">
+            <div class="member-badge">Digital Marketing</div>
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Aarti Kedari</h3>
+            <p class="member-role">Digital Marketing Co-Head</p>
+            <p class="member-quote">Using innovative platforms to amplify our reach and engage with our community.</p>
+            <div class="member-skills">
+                <span class="skill-tag">Content</span>
+                <span class="skill-tag">Analytics</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Head -->
+    <div class="member-card">
+        <div class="member-image">
+            <img src="./asssets/Core/Saima.jpeg" alt="Saima Khan">
+            <div class="member-badge">Content Head</div>
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Saima Khan</h3>
+            <p class="member-role">Anchoring & Content Head</p>
+            <p class="member-quote">Creating engaging content and organizing events that celebrate creativity and talent.</p>
+            <div class="member-skills">
+                <span class="skill-tag">Content</span>
+                <span class="skill-tag">Anchoring</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Co-Head -->
+    <div class="member-card">
+        <div class="member-image">
+            <img src="./asssets/Core/Savleen.jpeg" alt="Savleen Kaur">
+            <div class="member-badge">Content Co-Head</div>
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Savleen Kaur</h3>
+            <p class="member-role">Anchoring & Content Co-Head</p>
+            <p class="member-quote">Shaping our community through engaging events that inspire creativity and connections.</p>
+            <div class="member-skills">
+                <span class="skill-tag">Events</span>
+                <span class="skill-tag">Communication</span>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
             <div class="footer-content">
-                <p>©2024 IETE-SF, KCCEMSR, Thane.<br>
-                    <span style="font-weight: 500; font-size: 15px;">
-                        Developed by: Rohit Rathod<br>
-                        <span>Contact me: </span>
-                        <!-- LinkedIn Icon (Optional) -->
-                        <a class="ml-2" href="https://www.linkedin.com/in/rohit-rathod-2715rr/" target="_blank">
-                            <i class="fab fa-linkedin icon"></i>
-                        </a>
-                        <!-- Email Icon -->
-                        <a class="ml-2" href="mailto:rohitrathod2815@gmail.com">
-                            <i class="fas fa-envelope icon"></i>
-                        </a>
-                    </span>
-                </p>
+                <div class="footer-info">
+                    <p class="footer-text">©2024 IETE-SF, KCCEMSR, Thane.</p>
+                    <div class="developer-info">
+                        <p class="developer-text">Developed by: Rohit Rathod</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/rohit-rathod-2715rr/" target="_blank" class="social-link" aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:rohitrathod2815@gmail.com" class="social-link" aria-label="Email">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.724l9.615-6.903h.749c.904 0 1.636.732 1.636 1.636z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-actions">
+                    <button class="back-to-top" id="backToTop">Back to top</button>
+                    <a href="thanks.html" class="contributor-link">Contributors</a>
+                </div>
             </div>
-            <div class="footer-buttons">
-                <p class="back-to-top-container">
-                    <a href="#" class="back-to-top">Back to top</a>
-                </p>
-                <p class="contributor-container">
-                    <a href="thanks.html" class="contributor">Contributor</a>
-                </p>
-            </div>
-        </footer>
+        </div>
+    </footer>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="members-script.js"></script>
 </body>
 
 </html>
