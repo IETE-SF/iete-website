@@ -216,10 +216,15 @@ body {
 /* Hero Section (for index.html slider) */
 .hero {
   position: relative;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
 }
+.indexhero
+{ position: relative;
+  height: 100vh;
+  overflow: hidden;
 
+}
 .hero-slider {
   position: relative;
   width: 100%;
@@ -725,6 +730,7 @@ section {
 .footer-brand img {
   width: 48px;
   height: 48px;
+  filter: invert();
   margin-bottom: 16px;
 }
 

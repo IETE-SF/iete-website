@@ -1,171 +1,109 @@
-// Mobile Navigation Toggle
-const navToggle = document.getElementById("navToggle")
-const navMenu = document.getElementById("navMenu")
+document.addEventListener("DOMContentLoaded", () => {
+  // Filter Functionality
+  const filterButtons = document.querySelectorAll(".filter-btn")
+  const eventCards = document.querySelectorAll(".event-card")
 
-navToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("active")
-  navToggle.classList.toggle("active")
-})
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Remove active class from all buttons
+      filterButtons.forEach((btn) => btn.classList.remove("active"))
+      // Add active class to clicked button
+      button.classList.add("active")
 
-// Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll(".nav-link")
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navMenu.classList.remove("active")
-    navToggle.classList.remove("active")
-  })
-})
+      const filterValue = button.getAttribute("data-filter")
 
-// Back to Top Button
-const backToTopBtn = document.getElementById("backToTop")
+      eventCards.forEach((card) => {
+        card.classList.add("filtering")
 
-backToTopBtn.addEventListener("click", (e) => {
-  e.preventDefault()
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  })
-})
-
-// Navbar scroll effect
-let lastScrollTop = 0
-const navbar = document.querySelector(".navbar")
-
-window.addEventListener("scroll", () => {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-
-  if (scrollTop > lastScrollTop && scrollTop > 100) {
-    // Scrolling down
-    navbar.style.transform = "translateY(-100%)"
-  } else {
-    // Scrolling up
-    navbar.style.transform = "translateY(0)"
-  }
-
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
-})
-
-// Filter Functionality
-const filterButtons = document.querySelectorAll(".filter-btn")
-const eventCards = document.querySelectorAll(".event-card")
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    // Remove active class from all buttons
-    filterButtons.forEach((btn) => btn.classList.remove("active"))
-    // Add active class to clicked button
-    button.classList.add("active")
-
-    const filterValue = button.getAttribute("data-filter")
-
-    eventCards.forEach((card) => {
-      card.classList.add("filtering")
-
-      if (filterValue === "all") {
-        card.classList.remove("hidden", "fade-out")
-        card.classList.add("fade-in")
-      } else {
-        const cardCategory = card.getAttribute("data-category")
-        if (cardCategory === filterValue) {
+        if (filterValue === "all") {
           card.classList.remove("hidden", "fade-out")
           card.classList.add("fade-in")
         } else {
-          card.classList.add("fade-out")
-          setTimeout(() => {
-            card.classList.add("hidden")
-            card.classList.remove("fade-out")
-          }, 300)
+          const cardCategory = card.getAttribute("data-category")
+          if (cardCategory === filterValue) {
+            card.classList.remove("hidden", "fade-out")
+            card.classList.add("fade-in")
+          } else {
+            card.classList.add("fade-out")
+            setTimeout(() => {
+              card.classList.add("hidden")
+              card.classList.remove("fade-out")
+            }, 300)
+          }
         }
+      })
+
+      // Remove filtering class after animation
+      setTimeout(() => {
+        eventCards.forEach((card) => {
+          card.classList.remove("filtering", "fade-in")
+        })
+      }, 500)
+    })
+  })
+
+  // Load More Functionality
+  const loadMoreBtn = document.getElementById("loadMoreBtn")
+  let visibleEvents = 6
+  const totalEvents = eventCards.length
+
+  // Initially hide events beyond the first 6
+  function initializeEventDisplay() {
+    eventCards.forEach((card, index) => {
+      if (index >= visibleEvents) {
+        card.style.display = "none"
       }
     })
 
-    // Remove filtering class after animation
-    setTimeout(() => {
-      eventCards.forEach((card) => {
-        card.classList.remove("filtering", "fade-in")
+    if (totalEvents <= visibleEvents) {
+      if (loadMoreBtn) loadMoreBtn.style.display = "none"
+    }
+  }
+
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener("click", () => {
+      const hiddenEvents = Array.from(eventCards).filter((card) => card.style.display === "none")
+      const eventsToShow = hiddenEvents.slice(0, 3)
+
+      eventsToShow.forEach((card, index) => {
+        setTimeout(() => {
+          card.style.display = "block"
+          card.style.opacity = "0"
+          card.style.transform = "translateY(30px)"
+
+          setTimeout(() => {
+            card.style.transition = "all 0.6s ease"
+            card.style.opacity = "1"
+            card.style.transform = "translateY(0)"
+          }, 50)
+        }, index * 100)
       })
-    }, 500)
-  })
-})
 
-// Load More Functionality
-const loadMoreBtn = document.getElementById("loadMoreBtn")
-let visibleEvents = 6
-const totalEvents = eventCards.length
+      visibleEvents += eventsToShow.length
 
-// Initially hide events beyond the first 6
-function initializeEventDisplay() {
-  eventCards.forEach((card, index) => {
-    if (index >= visibleEvents) {
-      card.style.display = "none"
-    }
-  })
-
-  if (totalEvents <= visibleEvents) {
-    loadMoreBtn.style.display = "none"
+      if (visibleEvents >= totalEvents) {
+        loadMoreBtn.textContent = "All Events Loaded"
+        loadMoreBtn.disabled = true
+      }
+    })
   }
-}
 
-loadMoreBtn.addEventListener("click", () => {
-  const hiddenEvents = Array.from(eventCards).filter((card) => card.style.display === "none")
-  const eventsToShow = hiddenEvents.slice(0, 3)
-
-  eventsToShow.forEach((card, index) => {
-    setTimeout(() => {
-      card.style.display = "block"
-      card.style.opacity = "0"
-      card.style.transform = "translateY(30px)"
-
-      setTimeout(() => {
-        card.style.transition = "all 0.6s ease"
-        card.style.opacity = "1"
-        card.style.transform = "translateY(0)"
-      }, 50)
-    }, index * 100)
-  })
-
-  visibleEvents += eventsToShow.length
-
-  if (visibleEvents >= totalEvents) {
-    loadMoreBtn.textContent = "All Events Loaded"
-    loadMoreBtn.disabled = true
+  // Intersection Observer for animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
   }
-})
 
-// Search Functionality (if needed in future)
-function searchEvents(query) {
-  const searchTerm = query.toLowerCase()
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1"
+        entry.target.style.transform = "translateY(0)"
+      }
+    })
+  }, observerOptions)
 
-  eventCards.forEach((card) => {
-    const title = card.querySelector(".event-title").textContent.toLowerCase()
-    const description = card.querySelector(".event-description").textContent.toLowerCase()
-    const category = card.querySelector(".event-category").textContent.toLowerCase()
-
-    if (title.includes(searchTerm) || description.includes(searchTerm) || category.includes(searchTerm)) {
-      card.classList.remove("hidden")
-    } else {
-      card.classList.add("hidden")
-    }
-  })
-}
-
-// Intersection Observer for animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px",
-}
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = "1"
-      entry.target.style.transform = "translateY(0)"
-    }
-  })
-}, observerOptions)
-
-// Observe elements for animation
-document.addEventListener("DOMContentLoaded", () => {
+  // Observe elements for animation
   initializeEventDisplay()
 
   const animatedElements = document.querySelectorAll(".event-card")
@@ -176,39 +114,11 @@ document.addEventListener("DOMContentLoaded", () => {
     el.style.transition = "opacity 0.6s ease, transform 0.6s ease"
     observer.observe(el)
   })
-})
 
-// Close mobile menu when clicking outside
-document.addEventListener("click", (e) => {
-  if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-    navMenu.classList.remove("active")
-    navToggle.classList.remove("active")
-  }
-})
+  // Event card hover effects
+  const eventCardsForHover = document.querySelectorAll(".event-card")
 
-// Prevent body scroll when mobile menu is open
-navToggle.addEventListener("click", () => {
-  if (navMenu.classList.contains("active")) {
-    document.body.style.overflow = "hidden"
-  } else {
-    document.body.style.overflow = ""
-  }
-})
-
-// Handle window resize
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 768) {
-    navMenu.classList.remove("active")
-    navToggle.classList.remove("active")
-    document.body.style.overflow = ""
-  }
-})
-
-// Event card hover effects
-document.addEventListener("DOMContentLoaded", () => {
-  const eventCards = document.querySelectorAll(".event-card")
-
-  eventCards.forEach((card) => {
+  eventCardsForHover.forEach((card) => {
     card.addEventListener("mouseenter", () => {
       card.style.transform = "translateY(-8px) scale(1.02)"
     })
@@ -217,38 +127,17 @@ document.addEventListener("DOMContentLoaded", () => {
       card.style.transform = "translateY(0) scale(1)"
     })
   })
-})
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault()
-    const target = document.querySelector(this.getAttribute("href"))
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
+  // Event card click handling
+  eventCards.forEach((card) => {
+    const learnMoreBtn = card.querySelector(".btn-primary")
+    if (learnMoreBtn) {
+      learnMoreBtn.addEventListener("click", (e) => {
+        e.preventDefault()
+        const eventTitle = card.querySelector(".event-title").textContent
+        console.log(`Learn more about: ${eventTitle}`)
+        // Here you can add modal functionality or navigation to detailed event page
       })
     }
   })
-})
-
-// Dynamic event loading (for future API integration)
-function loadEventsFromAPI() {
-  // This function can be used to load events dynamically from an API
-  // For now, it's a placeholder for future implementation
-  console.log("Loading events from API...")
-}
-
-// Event card click handling
-eventCards.forEach((card) => {
-  const learnMoreBtn = card.querySelector(".btn-primary")
-  if (learnMoreBtn) {
-    learnMoreBtn.addEventListener("click", (e) => {
-      e.preventDefault()
-      const eventTitle = card.querySelector(".event-title").textContent
-      console.log(`Learn more about: ${eventTitle}`)
-      // Here you can add modal functionality or navigation to detailed event page
-    })
-  }
 })
