@@ -2,431 +2,377 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="./css/styles.css">
+<link rel="stylesheet" href="./css/gallery-styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <title>IETE-ISF Contact</title>
-  <link rel="icon" href="asssets\iete_logo-removebg.png" type="image/x-icon">
+<title>Events - IETE-SF</title>
+<link rel="icon" href="assets/iete_logo-removebg.png" type="image/x-icon">
 </head>
 
-<body style="background-color: #E8E9E6;">
-  <header>
-    <nav class="navbar navbar-expand-md navbar-light bg-light pl-5">
-      <img class="pr-4" src="asssets/iete_logo-removebg.png" alt="" width="7%" height="7%">
-      <img class="logo-right pr-4" src="asssets/kc.jpg" alt="" width="7%" height="7%">
-      <a class="navbar-brand pr-4" href="index.html" style="font-weight: 500; font-size: 30px;"><b>IETE-SF</b></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse pl-5" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto" style="font-weight: 500;">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="members.html">Core-Team</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link " href="gallery.html"><u>Events</u></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="contact.html">Contact</a>
-          </li>
-        </ul>
+<body>
+<div id="navbar-placeholder"></div>
+
+<section class="hero hero-static">
+  <div class="container">
+    <h1 class="hero-title">Our Events</h1>
+    <p class="hero-subtitle">Discover our technical competitions, workshops, and educational programs</p>
+  </div>
+</section>
+
+ 
+
+<section class="events-section">
+  <div class="container">
+    <div class="events-grid" id="eventsGrid">
+      <div class="event-card" data-category="competition">
+        <div class="event-image">
+          <img src="asssets/Event/Aarambh.webp" alt="Aarambh 2024-25">
+          <div class="event-badge">New</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Launch Event</span>
+            <span class="event-date">2024-25</span>
+          </div>
+          <h3 class="event-title">Aarambh 2024-25</h3>
+          <p class="event-subtitle">A New Year's Resolution</p>
+          <p class="event-description">Marks the exciting start of IETE-SF's new tenure with its inaugural event. Celebrate the launch of the annual magazine, featuring the latest updates, achievements, and insights from the past year.</p>
+           <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+          </div>-->
+        </div>
       </div>
-      <hr class="featurette-divider">
-    </nav>
-  </header>
 
-  <main role="main">
-    <div class="container heading mt-3 animated-heading-container">
-      <p style="text-align: center;font-size: 60px;font-weight: 500;"><u>Events</u></p>
+      <div class="event-card" data-category="competition">
+        <div class="event-image">
+          <img src="asssets/Event/TechTrek.webp" alt="TechTrek">
+          <div class="event-badge">Competition</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Hardware Competition</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">TechTrek</h3>
+          <p class="event-subtitle">A Hardware Mini Project Competition</p>
+          <p class="event-description">Design and build innovative hardware solutions that address real-world challenges. Compete with other tech enthusiasts for prizes and recognition while demonstrating your ability to integrate components.</p>
+            <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+          </div>-->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="workshop">
+        <div class="event-image">
+          <img src="asssets/Event/Web-3 Sangam.webp" alt="Web 3 Sangam">
+          <div class="event-badge">Workshop</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Blockchain Workshop</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">Web 3 Sangam</h3>
+          <p class="event-subtitle">A Workshop on Blockchain</p>
+          <p class="event-description">Dive into key concepts, practical applications, and hands-on exercises to understand how blockchain can revolutionize industries. Learn from industry experts about smart contracts and decentralized applications.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="competition">
+        <div class="event-image">
+          <img src="asssets/Event/Tech Digest.webp" alt="Tech Digest">
+          <div class="event-badge">Competition</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Writing Competition</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">Tech Digest</h3>
+          <p class="event-subtitle">A Technical Blog Writing Competition</p>
+          <p class="event-description">Craft insightful and engaging articles on the latest tech trends, innovations, and industry developments. Compete for recognition and prizes by demonstrating your writing skills.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="webinar">
+        <div class="event-image">
+          <img src="asssets/Event/OCN Webinar.webp" alt="OptiSystem Webinar">
+          <div class="event-badge">Webinar</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Technical Webinar</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">OptiSystem Webinar</h3>
+          <p class="event-subtitle">Optical Communication & Amplifier Design</p>
+          <p class="event-description">Discover the power of OptiSystem in optical communication and amplifier design. Explore advanced simulation techniques for optimizing optical communication systems.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+            <a href="https://www.youtube.com/watch?v=UtCQFn_jF_4" target="_blank" class="btn-secondary">Watch</a>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="seminar">
+        <div class="event-image">
+          <img src="asssets/Event/Web Servers.webp" alt="Web Servers">
+          <div class="event-badge">Expert Talk</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Expert Session</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">Expert Talk on Web Servers</h3>
+          <p class="event-subtitle">A Session with Industry Experts</p>
+          <p class="event-description">Learn from industry leaders about the latest trends and technologies in web server management, performance optimization, and security.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="competition">
+        <div class="event-image">
+          <img src="asssets/Event/Techbate.webp" alt="Techbate-2k24">
+          <div class="event-badge">National</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Debate Competition</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">Techbate-2k24</h3>
+          <p class="event-subtitle">National Level Technical Debate</p>
+          <p class="event-description">A premier national-level technical debate competition where participants engage in thought-provoking discussions on cutting-edge technology topics.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="workshop">
+        <div class="event-image">
+          <img src="asssets/Event/Maaz Event.webp" alt="IoT Workshop">
+          <div class="event-badge">Weekend</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">IoT Workshop</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">Weekends with IETE-SF</h3>
+          <p class="event-subtitle">IoT at Your Fingertips</p>
+          <p class="event-description">Dive into the world of the Internet of Things (IoT) with hands-on workshops and expert talks. Learn about the latest technologies and practical applications.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="workshop">
+        <div class="event-image">
+          <img src="asssets/Event/Ace.webp" alt="Project Competition">
+          <div class="event-badge">Workshop</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Project Guidance</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">Ace the National Level Project Competition</h3>
+          <p class="event-subtitle">Expert Guidance Session</p>
+          <p class="event-description">Receive expert insights, practical tips, and valuable feedback to refine your projects and enhance your presentation skills.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+            <a href="https://www.youtube.com/watch?v=G_GVyUbJjhI" target="_blank" class="btn-secondary">Watch</a>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="webinar">
+        <div class="event-image">
+          <img src="asssets/Event/Jyoti Event.webp" alt="Game Development">
+          <div class="event-badge">Webinar</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Game Development</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">Game Development Webinar</h3>
+          <p class="event-subtitle">Weekend Learning Session</p>
+          <p class="event-description">Learn from industry experts about the latest tools, techniques, and trends in the gaming industry. Perfect for aspiring game developers.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+            <a href="https://www.youtube.com/watch?v=BQ_3y5szdVs" target="_blank" class="btn-secondary">Watch</a>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="seminar">
+        <div class="event-image">
+          <img src="asssets/Event/Soft Skill.webp" alt="Soft Skills">
+          <div class="event-badge">Seminar</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Skill Development</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">Mastering Soft Skills</h3>
+          <p class="event-subtitle">English Speaking Etiquettes</p>
+          <p class="event-description">Enhance interpersonal abilities and communication skills, focusing on effective communication, teamwork, problem-solving, and leadership.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="competition">
+        <div class="event-image">
+          <img src="asssets/Event/event7.jpg" alt="Poster Making">
+          <div class="event-badge">Competition</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Creative Competition</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">Poster Making Competition</h3>
+          <p class="event-subtitle">Make Something Smart</p>
+          <p class="event-description">Topic: Emerging Technologies in INDIA. Show your productivity and win assured prizes. Open for SE, TE, BE Students.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+            <a href="https://forms.gle/hV9pk2ctYdyxjnim6" target="_blank" class="btn-secondary">Register</a>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="competition">
+        <div class="event-image">
+          <img src="asssets/Event/event2.jpg" alt="Pitchers Tank">
+          <div class="event-badge">Competition</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Pitching Competition</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">Pitchers Tank</h3>
+          <p class="event-subtitle">Where Idea Meets Reality</p>
+          <p class="event-description">Focus on practical implementations of innovative ideas and give young entrepreneurs an opportunity to showcase their talents and skills.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="webinar">
+        <div class="event-image">
+          <img src="asssets/Event/event3.jpeg" alt="Automation Industry Webinar">
+          <div class="event-badge">Webinar</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Technical Webinar</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">Automation Industry Webinar</h3>
+          <p class="event-subtitle">Build Something Smart</p>
+          <p class="event-description">Learn about the latest technologies used in Industrial Automation and different job opportunities for an Automation Engineer in the industrial sector.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="competition">
+        <div class="event-image">
+          <img src="asssets/Event/event4.jpeg" alt="Swayam Kalam">
+          <div class="event-badge">Competition</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Presentation Competition</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">Swayam Kalam</h3>
+          <p class="event-subtitle">Present Your View</p>
+          <p class="event-description">Engage in captivating presentations on various topics, evaluated on presentation skills, confidence, clarity, and content.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="competition">
+        <div class="event-image">
+          <img src="asssets/Event/event6.jpg" alt="E-Poster Competition">
+          <div class="event-badge">Competition</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Creative Competition</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">E-Poster Competition</h3>
+          <p class="event-subtitle">Express Your Mind</p>
+          <p class="event-description">Create posters based on technical projects and research papers, evaluated on color combination, content, and technical language.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="event-card" data-category="seminar">
+        <div class="event-image">
+          <img src="asssets/Event/event5.jpg" alt="Tech-Talk With Alumni">
+          <div class="event-badge">Seminar</div>
+        </div>
+        <div class="event-content">
+          <div class="event-meta">
+            <span class="event-category">Alumni Talk</span>
+            <span class="event-date">2024</span>
+          </div>
+          <h3 class="event-title">Tech-Talk With Alumni</h3>
+          <p class="event-subtitle">Decide Your Prospective</p>
+          <p class="event-description">Learn from alumni about joining the Indian Navy and pursuing higher studies abroad, focusing on research-oriented education.</p>
+          <!-- <div class="event-actions">
+            <button class="btn-primary">Learn More</button>
+            <a href="https://www.youtube.com/live/OHvz2cvOmLI?feature=share" target="_blank" class="btn-secondary">Watch</a>
+          </div> -->
+        </div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="container marketing mt-1">
-      <!-- START THE FEATURETTES -->
+<section class="load-more-section">
+  <div class="container">
+    <button class="load-more-btn" id="loadMoreBtn">Load More Events</button>
+  </div>
+</section>
 
-      <div class="container marketing mt-5">
+<div id="footer-placeholder"></div>
 
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">Aarambh 2024-25 </h2><br>
-            <span class="text-muted" style="font-size: large;font-weight:500;">A New Year's Resolution</span>
-            <p class="lead" style="font-size: small;">Aarambh 2023-24 marks the exciting start of IETE-SF's new tenure
-              with its inaugural event. Celebrate the launch of the annual magazine, featuring the latest updates,
-              achievements, and insights from the past year. This event will showcase the organization's new plans,
-              initiatives, and opportunities for members, setting the tone for an engaging and productive year ahead.
-            </p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/Aarambh.webp" alt="event2">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">TechTrek </h2><br>
-            <span class="text-muted" style="font-size: large;font-weight:500;">A Hardware Mini Project
-              Competition</span>
-            <p class="lead" style="font-size: small;">Design and build innovative hardware solutions that address
-              real-world challenges. Compete with other tech enthusiasts for prizes and recognition while demonstrating
-              your ability to integrate components and develop functional prototypes. Ideal for students and hobbyists
-              eager to bring their hardware ideas to life and gain hands-on experience.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/TechTrek.webp" alt="event2">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">Web 3 Sangam </h2>
-            <span class="text-muted" style="font-size: large;font-weight:500;">A Workshop on Blockchain</span>
-            <p class="lead" style="font-size: small;">Dive into key concepts, practical applications, and hands-on
-              exercises to understand how blockchain can revolutionize industries. Learn from industry experts about
-              smart contracts, decentralized applications, and the future of Web 3. Perfect for tech enthusiasts,
-              developers, and anyone eager to grasp the transformative potential of blockchain.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/Web-3 Sangam.webp" alt="event2">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">Tech Digest</h2><br>
-            <span class="text-muted" style="font-size: large;font-weight:500;">A Technical Blog Writing
-              Competition</span>
-            <p class="lead" style="font-size: small;">Craft insightful and engaging articles on the latest tech trends,
-              innovations, and industry developments. Compete for recognition and prizes by demonstrating your ability
-              to translate complex technical concepts into accessible and compelling content. Ideal for tech
-              enthusiasts, students, and professionals looking to share their knowledge and passion for technology.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/Tech Digest.webp" alt="event2">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">Webinar on</h2>
-            <span class="text-muted" style="font-size: large;font-weight:500;">OptiSystem for Optical Communication &
-              Amplifier Design Simulation Techniques</span>
-            <p class="lead" style="font-size: small;">Discover the power of OptiSystem in our webinar focused on optical
-              communication and amplifier design. Explore advanced simulation techniques for optimizing optical
-              communication systems and designing high-performance amplifiers. Learn from experts about practical
-              applications, key features, and best practices for using OptiSystem software. Ideal for engineers,
-              researchers, and students seeking to enhance their skills in optical communication and amplifier design.
-              <a href="https://www.youtube.com/watch?v=UtCQFn_jF_4" target="_blank"><u>Click Here!</u></a>
-            </p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/OCN Webinar.webp" alt="event2">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">Expert Talk on Web Servers</h2><br>
-            <span class="text-muted" style="font-size: large;font-weight:500;">A Session with Industry Experts</span>
-            <p class="lead" style="font-size: small;">Learn from industry leaders about the latest trends and
-              technologies in web server management, performance optimization, and security. This session is ideal for
-              IT professionals, developers, and enthusiasts looking to deepen their understanding of web server
-              operations and improve their technical expertise.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/Web Servers.webp" alt="event2">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">Techbate-2k24 </h2><br>
-            <span class="text-muted" style="font-size: large;font-weight:500;">A National Level Technical Debate
-              Competition</span>
-            <p class="lead" style="font-size: small;">Techbate-2k24 is a premier national-level technical debate
-              competition where participants engage in thought-provoking discussions on cutting-edge technology topics.
-              Compete against top students from across the country, presenting and defending your viewpoints on the
-              latest innovations and industry trends. The event features expert judges, valuable networking
-              opportunities, and prizes for the most compelling arguments. Perfect for those looking to showcase their
-              knowledge, critical thinking, and debate skills in the tech arena.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/Techbate.webp" alt="event2">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">Weekends with IETE-SF:</h2>
-            <span class="text-muted" style="font-size: large;font-weight:500;">IoT at Your Fingertips – Connecting the
-              Future</span>
-            <p class="lead" style="font-size: small;">Dive into the world of the Internet of Things (IoT) with IETE-SF
-              this weekend. Explore how IoT is shaping the future with hands-on workshops and expert talks. Learn about
-              the latest technologies, practical applications, and innovative solutions that connect devices and
-              transform industries. Perfect for enthusiasts and professionals eager to understand and implement IoT
-              technologies in real-world scenarios.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/Maaz Event.webp" alt="event2">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;"> Weekends with IETE-SF:</h2>
-            <span class="text-muted" style="font-size: large;font-weight:500;">Ace the National Level Project
-              Competition</span>
-            <p class="lead" style="font-size: small;">Receive expert insights, practical tips, and valuable feedback to
-              refine your projects and enhance your presentation skills. Learn from experienced mentors who will guide
-              you through the intricacies of project development, from conceptualization to execution. Participate in
-              interactive workshops and collaborative activities that foster creativity and innovation. Network with
-              fellow students and professionals, exchanging ideas and gaining inspiration.
-              <a href="https://www.youtube.com/watch?v=G_GVyUbJjhI" target="_blank"><u>Click Here!</u></a>
-            </p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/Ace.webp" alt="event2">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;"> Weekends with IETE-SF:</h2>
-            <span class="text-muted" style="font-size: large;font-weight:500;">Webinar on Game Development</span>
-            <p class="lead" style="font-size: small;">This weekend event offers insights into the latest tools,
-              techniques, and trends in the gaming industry. Learn from industry experts and enhance your skills in
-              creating immersive and interactive gaming experiences. Perfect for aspiring game developers and
-              enthusiasts!
-              <a href="https://www.youtube.com/watch?v=BQ_3y5szdVs" target="_blank"><u>Click Here!</u></a>
-            </p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/Jyoti Event.webp" alt="event2">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">Seminar:</h2>
-            <span class="text-muted" style="font-size: large;font-weight:500;">Mastering Soft Skills & English Speaking
-              Etiquettes</span>
-            <p class="lead" style="font-size: small;">This seminar enhances students' interpersonal abilities and
-              communication skills, focusing on effective communication, teamwork, problem-solving, and leadership.
-              Participants learn proper English speaking etiquettes, including pronunciation, grammar, and professional
-              conversation practices. Led by experienced trainers, the event features interactive sessions and hands-on
-              exercises, equipping students with essential skills for personal and professional success.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/Soft Skill.webp" alt="event2">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">Poster Making Competition </h2><br>
-            <span class="text-muted" style="font-size: large;font-weight:500;">Make something smart.</span>
-            <p class="lead" style="font-size: medium;"><u><b>Topic</b></u> : Emerging Technologies in INDIA.<br>Show
-              your
-              productivity and win assured prizes.<br><br><a class="btn btn-lg btn-primary" target="_blank"
-                href="https://forms.gle/hV9pk2ctYdyxjnim6" role="button">Register Now </a>
-            </p>
-            <p style="font-size: small;"><b>*NOTE :- Only for SE, TE, BE Students.</b></p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/event7.jpg" alt="event7">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">Pitchers Tank </h2><br>
-            <span class="text-muted" style="font-size: large;font-weight:500;">Where idea meets reality.</span>
-            <p class="lead" style="font-size: small;">The motive of the competition was to focus on the practical
-              implementations of innovative ideas of students and giving an opportunity to young entrepreneurs to
-              showcase
-              their talents & encourage them to test their skills.
-              Prof. Yogesh Karunakar and Mr. Sagar Bhosle, Director of MFC Restaurants were the judges for the
-              competition.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/event2.jpg" alt="event2">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">Automation Industry Webinar </h2><br>
-            <span class="text-muted" style="font-size: large;font-weight:500;">Build something smart.</span>
-            <p class="lead" style="font-size: small;">Mr. Rajesh gave the introduction on Automation Industry and gave
-              an
-              overview on working and process of different automated machines he designed in the industrial projects.
-              he explained the working of Electrical motor, VFD, PLCs and HMI/SCADA software by animated videos and
-              introduced us the recent technologies used in Industrial Automation and different job opportunities for an
-              Automation Engineer in Industrial Sector.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/event3.jpeg" alt="event3">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">Swayam Kalam </h2><br>
-            <span class="text-muted" style="font-size: large;font-weight:500;">Present your view.</span>
-            <p class="lead" style="font-size: small;">The participants were divided into two groups where the judges in
-              each group evaluated them on the basis of their presentation skills, confidence, clarity and content.
-              Twelve teams across different institutes have participated and gave captivating presentations. Each team
-              was
-              given 7 minutes to present their PPT’s on any one of the topics given and 1 minute for question-and-answer
-              session. </p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/event4.jpeg" alt="event4">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">E-Poster Competition </h2><br>
-            <span class="text-muted" style="font-size: large;font-weight:500;">Express Your Mind</span>
-            <p class="lead" style="font-size: small;">This event contains poster on the basis of technical
-              projects,technical research papers and the judge has decided the winner on the account of colour
-              combination,content and technical language. </p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/event6.jpg" alt="event6">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 mt-5">
-            <h2 class="featurette-heading1" style="font-weight: 500;">Tech-Talk With Alumni </h2><br>
-            <span class="text-muted" style="font-size: large;font-weight:500;">Decide your Prospective.</span>
-            <p class="lead" style="font-size: small;">Mr. Pritam Sahu explained us the various selection procedure to
-              join
-              Indian Navy, complementary to the selection procedure he explained the various fields of Engineering
-              services at Indian Navy in which we Engineers can join the Indian Navy as an officer.
-              Mr. Raunak Salvi currently pursuing MS in Electrical systems Engineering at the University of Paderborn,
-              Germany.
-              This session was about how to prepare for higher studies at abroad. At the beginning of this session he
-              compares the difference between the education system of Germany and other countries and how German
-              universities are focused in research oriented study unlike India and other countries.
-              <a href="https://www.youtube.com/live/OHvz2cvOmLI?feature=share" target="_blank"><u>Click Here!</u></a>
-            </p>
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image1 img-fluid mx-auto" width="400"
-              height="400" src="asssets/Event/event5.jpg" alt="event5">
-          </div>
-        </div>
-
-      </div><!-- /.container -->
-
-  </main>
-
-  <hr class="featurette-divider">
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p>©2024 IETE-SF, KCCEMSR, Thane.<br>
-        <span style="font-weight: 500; font-size: 15px;">
-          Developed by: Rohit Rathod<br>
-          <span>Contact me: </span>
-          <!-- LinkedIn Icon (Optional) -->
-          <a class="ml-2" href="https://www.linkedin.com/in/rohit-rathod-2715rr/" target="_blank">
-            <i class="fab fa-linkedin icon"></i>
-          </a>
-          <!-- Email Icon -->
-          <a class="ml-2" href="mailto:rohitrathod2815@gmail.com">
-            <i class="fas fa-envelope icon"></i>
-          </a>
-        </span>
-      </p>
-    </div>
-    <div class="footer-buttons">
-      <p class="back-to-top-container">
-        <a href="#" class="back-to-top">Back to top</a>
-      </p>
-      <p class="contributor-container">
-        <a href="thanks.html" class="contributor">Contributor</a>
-      </p>
-    </div>
-  </footer>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+<script src="./js/load-components.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/gallery-script.js"></script>
 </body>
 
 </html>

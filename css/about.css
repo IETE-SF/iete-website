@@ -1,0 +1,297 @@
+
+
+/* Hero Section - Consistent with main styles */
+.hero-static {
+  background: linear-gradient(135deg, var(--background-light) 0%, var(--border-color) 100%);
+  text-align: center;
+  align-items: center;
+  padding: 120px 0 60px; /* Adjusted padding for consistency */
+}
+
+.hero-static .hero-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem); /* Consistent font size */
+  font-weight: 700;
+  color: var(--text-primary); /* Consistent color */
+  margin-top: 1rem;
+ 
+}
+
+.hero-underline {
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Main Content */
+.main-content {
+  padding: 40px 0;
+}
+
+.content-section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.5rem); /* Consistent font size */
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 48px;
+  color: var(--text-primary); /* Consistent color */
+}
+
+.content-card {
+  background: var(--background-white); /* Use white background for cards */
+  border-radius: var(--border-radius-lg); /* Use consistent border radius */
+  padding: 48px;
+  box-shadow: var(--shadow-md); /* Use consistent shadow */
+  border: 1px solid var(--border-color); /* Use consistent border */
+}
+
+.content-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary); /* Consistent text color */
+  margin-bottom: 24px;
+  text-align: justify;
+}
+
+/* Objectives Section */
+.objectives-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.objective-card {
+  background: var(--background-white);
+  border-radius: var(--border-radius-lg);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.objective-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); /* Consistent gradient */
+}
+
+.objective-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--border-color-hover);
+}
+
+.objective-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--primary-light), var(--accent-light)); /* Consistent gradient */
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.objective-card:hover .objective-icon {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--background-white);
+  transform: scale(1.1);
+}
+
+.objective-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.objective-card-text {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Benefits Section */
+.benefits-section {
+  background: linear-gradient(135deg, var(--background-light) 0%, var(--border-color) 100%); /* Consistent background */
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.benefit-card {
+  background: var(--background-white);
+  border-radius: var(--border-radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.02), rgba(var(--accent-rgb), 0.02));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.benefit-card:hover::before {
+  opacity: 1;
+}
+
+.benefit-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  border-color: var(--border-color-hover);
+}
+
+.benefit-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.benefit-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.benefit-card:hover .benefit-icon-wrapper {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--background-white);
+  transform: rotate(5deg) scale(1.1);
+}
+
+.benefit-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.benefit-card-description {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.benefit-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+  color: var(--primary-dark);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.benefit-card:hover .benefit-tag {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--background-white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-static {
+    padding: 100px 0 40px;
+  }
+  .hero-static .hero-title {
+    font-size: 36px;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+  .content-card {
+    padding: 32px 24px;
+  }
+  .objectives-container,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .objective-card,
+  .benefit-card {
+    padding: 24px 20px;
+  }
+  .benefit-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .benefit-card-title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-static {
+    padding: 80px 0 30px;
+  }
+  .hero-static .hero-title {
+    font-size: 28px;
+  }
+  .content-section {
+    padding: 40px 0;
+  }
+  .content-card {
+    padding: 24px 16px;
+  }
+  .objectives-container,
+  .benefits-grid {
+    gap: 20px;
+  }
+  .objective-card,
+  .benefit-card {
+    padding: 20px 16px;
+  }
+  .objective-icon {
+    width: 56px;
+    height: 56px;
+  }
+  .benefit-icon-wrapper {
+    width: 44px;
+    height: 44px;
+  }
+}
