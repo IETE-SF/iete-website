@@ -1,13 +1,13 @@
-/* Professional Minimalistic Design for IETE-SF */
+ 
 
-/* CSS Reset */
+ 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* CSS Variables */
+ 
 :root {
   --primary-color: #2563eb; /* Blue-600 */
   --primary-dark: #1d4ed8; /* Blue-700 */
@@ -33,12 +33,11 @@
   --transition: all 0.2s ease-in-out;
   --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  /* RGB values for rgba colors */
+ 
   --primary-rgb: 37, 99, 235;
   --accent-rgb: 14, 165, 233;
 }
-
-/* Base Styles */
+ 
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -58,7 +57,7 @@ body {
   padding: 0 20px;
 }
 
-/* Loading Screen */
+ 
 #loading-screen {
   position: fixed;
   top: 0;
@@ -106,8 +105,7 @@ body {
     transform: rotate(360deg);
   }
 }
-
-/* Navigation */
+ 
 .navbar {
   position: fixed;
   top: 0;
@@ -154,21 +152,26 @@ body {
   text-decoration: none;
 }
 
-.nav-menu {
+/* Desktop Navigation Menu */
+.nav-menu.desktop-nav {
   display: flex;
   align-items: center;
   gap: 32px;
-  /* Position for desktop, will be overridden for mobile */
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
+/* Mobile Navigation Menu - Hidden by default */
+.nav-menu.mobile-nav {
+  display: none;
+}
+
 .nav-link {
   text-decoration: none;
   color: var(--text-primary);
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: 400;
+  font-size: .8rem;
   position: relative;
   transition: var(--transition);
   padding: 8px 0;
@@ -1024,29 +1027,35 @@ section {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* Tablet Styles */
+@media (max-width: 1024px) and (min-width: 769px) {
   .nav-menu {
-    position: fixed;
-    top: 70px;
-    left: -100%;
-    width: 100%;
-    height: calc(100vh - 70px);
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 48px;
-    transition: left 0.3s ease;
-    box-shadow: var(--shadow-lg); /* Add shadow for mobile menu */
+    gap: 1rem;
   }
+  
+  .nav-link {
+    font-size: 14px;
+  }
+  
+  .nav-container {
+    padding: 0 16px;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+}
 
-  .nav-menu.active {
-    left: 0;
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Hide desktop navigation on mobile */
+  .nav-menu.desktop-nav {
+    display: none;
   }
 
   .nav-toggle {
     display: flex;
+    z-index: 1000;  
   }
 
   .nav-toggle.active span:nth-child(1) {
@@ -1140,6 +1149,28 @@ section {
 
   .nav-container {
     padding: 0 16px;
+    height: 60px; /* Smaller navbar height for mobile */
+  }
+  
+  /* Mobile navigation is handled by mobile-navbar.css */
+  
+  /* Make nav links more tappable on mobile */
+  .nav-link {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 32px;
+    width: 85%;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
   }
 
   .hero {
@@ -1161,12 +1192,12 @@ section {
   }
 
   .nav-brand {
-    gap: 8px;
+    gap: 6px;
   }
 
   .nav-logo {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
   }
 
   .brand-text {
@@ -1189,3 +1220,4 @@ section {
     font-size: 0.9rem;
   }
 }
+
