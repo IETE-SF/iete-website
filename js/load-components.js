@@ -6,13 +6,27 @@ document.addEventListener("DOMContentLoaded", async () => {
       const response = await fetch("components/navbar.html")
       const navbarHtml = await response.text()
       navbarPlaceholder.innerHTML = navbarHtml
-      // After loading, initialize common scripts that depend on navbar elements
-      initializeCommonScripts()
       setActiveNavLink()
     } catch (error) {
       console.error("Error loading navbar:", error)
     }
   }
+
+  // Load Mobile Navbar
+  const mobileNavbarPlaceholder = document.getElementById("mobile-navbar-placeholder")
+  if (mobileNavbarPlaceholder) {
+    try {
+      const response = await fetch("components/mobile-navbar.html")
+      const mobileNavbarHtml = await response.text()
+      mobileNavbarPlaceholder.innerHTML = mobileNavbarHtml
+      // Mobile navbar initializes itself via mobile-navbar.js
+    } catch (error) {
+      console.error("Error loading mobile navbar:", error)
+    }
+  }
+
+  // Initialize common scripts after all components are loaded
+  initializeCommonScripts()
 
   // Load Footer
   const footerPlaceholder = document.getElementById("footer-placeholder")

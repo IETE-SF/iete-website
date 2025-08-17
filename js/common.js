@@ -1,49 +1,9 @@
 function initializeCommonScripts() {
-  // Mobile Navigation Toggle
-  const navToggle = document.getElementById("nav-toggle")
-  const navMenu = document.getElementById("nav-menu")
+  // Get common elements
   const navbar = document.getElementById("navbar")
   const backToTopBtn = document.getElementById("back-to-top")
-
-  if (navToggle && navMenu) {
-    navToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("active")
-      navToggle.classList.toggle("active")
-      if (navMenu.classList.contains("active")) {
-        document.body.style.overflow = "hidden"
-      } else {
-        document.body.style.overflow = ""
-      }
-    })
-
-    // Close mobile menu when clicking on a link
-    const navLinks = navMenu.querySelectorAll(".nav-link")
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("active")
-        navToggle.classList.remove("active")
-        document.body.style.overflow = ""
-      })
-    })
-
-    // Close mobile menu when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-        navMenu.classList.remove("active")
-        navToggle.classList.remove("active")
-        document.body.style.overflow = ""
-      }
-    })
-
-    // Handle window resize
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 768) {
-        navMenu.classList.remove("active")
-        navToggle.classList.remove("active")
-        document.body.style.overflow = ""
-      }
-    })
-  }
+  
+  // Mobile navigation is now handled by mobile-navbar.js
 
   // Back to Top Button
   if (backToTopBtn) {
@@ -62,13 +22,7 @@ function initializeCommonScripts() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop
 
     if (navbar) {
-      if (scrollTop > lastScrollTop && scrollTop > 100) {
-        // Scrolling down
-        navbar.style.transform = "translateY(-100%)"
-      } else {
-        // Scrolling up
-        navbar.style.transform = "translateY(0)"
-      }
+      // Keep navbar always visible - just add scrolled effect
       navbar.classList.toggle("scrolled", scrollTop > 50)
     }
 
