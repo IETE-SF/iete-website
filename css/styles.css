@@ -1221,3 +1221,59 @@ section {
   }
 }
 
+/* --- New Two-Column Hero Layout --- */
+
+/* --- FINAL V2: Two-Column Hero Layout --- */
+
+.hero-layout-container {
+  display: flex;
+  align-items: flex-start; /* Align both columns to the top */
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Hero slider column */
+.indexhero {
+  flex: 3;
+  height: 105vh; /* This sets the height for the slider */
+}
+
+/* Video container column */
+#side-video-container {
+  flex: 1;
+  height: 80vh; /* KEY CHANGE: Set the exact same height as the slider */
+  align-self: center; /* Center the video vertically */
+
+  /* Styling for the container */
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden; /* KEY CHANGE: Ensures the video never spills out */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+#side-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This handles the aspect ratio perfectly */
+}
+
+/* --- Mobile Responsiveness --- */
+/* This makes the layout stack vertically on smaller screens */
+@media (max-width: 992px) {
+  .hero-layout-container {
+    flex-direction: column;
+    align-items: center; /* Center items on mobile */
+  }
+
+  .indexhero {
+    height: 50vh;
+    width: 100%;
+  }
+
+  #side-video-container {
+    height: auto; /* Let height be automatic on mobile */
+    width: 80%; 
+    margin-top: 20px;
+  }
+}
+
