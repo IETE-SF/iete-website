@@ -6,6 +6,7 @@
   <title>Contact - IETE-SF</title>
   <link rel="icon" href="assets/iete_logo-removebg.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/mobile-navbar.css">
   <link rel="stylesheet" href="./css/contact-styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,7 @@
 </head>
 <body>
   <div id="navbar-placeholder"></div>
+  <div id="mobile-navbar-placeholder"></div>
 
   <section class="hero hero-static">
       <div class="container">
@@ -88,53 +90,7 @@
                   </div>
               </div>
 
-              <!-- <div class="contact-form-container">
-                  <div class="form-header">
-                      <h2 class="form-title">Send us a Message</h2>
-                      <p class="form-subtitle">Have a question or want to get involved? We'd love to hear from you.</p>
-                  </div>
-                  
-                  <form class="contact-form" id="contactForm">
-                      <div class="form-group">
-                          <label for="name" class="form-label">Full Name</label>
-                          <input type="text" id="name" name="name" class="form-input" required>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="email" class="form-label">Email Address</label>
-                          <input type="email" id="email" name="email" class="form-input" required>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="phone" class="form-label">Phone Number</label>
-                          <input type="tel" id="phone" name="phone" class="form-input">
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="subject" class="form-label">Subject</label>
-                          <select id="subject" name="subject" class="form-input" required>
-                              <option value="">Select a subject</option>
-                              <option value="general">General Inquiry</option>
-                              <option value="membership">Membership</option>
-                              <option value="events">Events</option>
-                              <option value="collaboration">Collaboration</option>
-                              <option value="other">Other</option>
-                          </select>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="message" class="form-label">Message</label>
-                          <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
-                      </div>
-                      
-                      <button type="submit" class="form-submit">
-                          <span class="submit-text">Send Message</span>
-                          <div class="submit-loader" style="display: none;">
-                              <div class="loader"></div>
-                          </div>
-                      </button>
-                  </form>
-              </div> -->
+            
           </div>
       </div>
   </section>
@@ -159,6 +115,7 @@
 
   <div id="footer-placeholder"></div>
 
+  <script src="./js/mobile-navbar.js"></script>
   <script src="./js/load-components.js"></script>
   <script src="./js/common.js"></script>
   <script src="./js/contact-script.js"></script>

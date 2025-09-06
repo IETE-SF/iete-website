@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  // Load Navbar
+ 
   const navbarPlaceholder = document.getElementById("navbar-placeholder")
   if (navbarPlaceholder) {
     try {
@@ -12,30 +12,34 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Load Mobile Navbar
+ 
   const mobileNavbarPlaceholder = document.getElementById("mobile-navbar-placeholder")
   if (mobileNavbarPlaceholder) {
     try {
       const response = await fetch("components/mobile-navbar.html")
       const mobileNavbarHtml = await response.text()
       mobileNavbarPlaceholder.innerHTML = mobileNavbarHtml
-      // Mobile navbar initializes itself via mobile-navbar.js
+      
+    
+      if (typeof initializeMobileNavbar === 'function') {
+        initializeMobileNavbar()
+      }
     } catch (error) {
       console.error("Error loading mobile navbar:", error)
     }
   }
 
-  // Initialize common scripts after all components are loaded
+   
   initializeCommonScripts()
 
-  // Load Footer
+ 
   const footerPlaceholder = document.getElementById("footer-placeholder")
   if (footerPlaceholder) {
     try {
       const response = await fetch("components/footer.html")
       const footerHtml = await response.text()
       footerPlaceholder.innerHTML = footerHtml
-      // Back to top button is part of footer, so it's handled by common.js
+     
     } catch (error) {
       console.error("Error loading footer:", error)
     }
