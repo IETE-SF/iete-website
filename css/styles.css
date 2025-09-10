@@ -107,6 +107,22 @@ body {
   .moving-link:hover {
     animation-play-state: paused;
   }
+
+/* Live event banner */
+.event-banner {
+  display: block;
+  padding: 12px;
+  background-color: #c01515;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  white-space: normal;
+  line-height: 1.3;
+}
+  
 .loading-spinner {
   width: 40px;
   height: 40px;
