@@ -82,6 +82,31 @@ body {
   color: var(--text-primary);
 }
 
+/* sliding animation */
+ @keyframes moveRightToLeft {
+    0% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(calc(-100% - 100vw));
+    }
+  }
+
+  .moving-link {
+    display: inline-block;
+    padding: 10px 20px;
+    white-space: nowrap;
+    background-color: #297cd4;
+    color: white;
+    font-weight: bold;
+    animation: moveRightToLeft 10s linear infinite;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .moving-link:hover {
+    animation-play-state: paused;
+  }
 .loading-spinner {
   width: 40px;
   height: 40px;
