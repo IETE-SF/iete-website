@@ -79,26 +79,10 @@
   transform: translateY(0);
 }
 
-/* Special styling for upcoming events card */
-.event-card.upcoming-card {
-  border: 3px solid #c01515; /* Red border for emphasis */
-  position: relative;
-  box-shadow: 0 10px 15px -3px rgba(192, 21, 21, 0.1), 0 4px 6px -2px rgba(192, 21, 21, 0.05);
-  cursor: pointer; /* Show pointer cursor to indicate it's clickable */
-  display: flex;
-  flex-direction: column;
-}
-
 .event-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
   border-color: var(--border-color-hover);
-}
-
-/* Keep the red border on hover for upcoming events card */
-.event-card.upcoming-card:hover {
-  border-color: #c01515;
-  box-shadow: 0 20px 25px -5px rgba(192, 21, 21, 0.2), 0 10px 10px -5px rgba(192, 21, 21, 0.1);
 }
 
 .event-card.hidden {
@@ -113,25 +97,11 @@
   height: 240px;
 }
 
-/* Adjust upcoming card image container */
-.upcoming-card .event-image {
-  height: 350px; /* Increased height to make image more visible */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .event-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
-}
-
-/* Specific adjustment for the upcoming events card image */
-.upcoming-card .event-image img {
-  object-position: center top; /* Positioned at top to show more image content */
-  object-fit: cover;
 }
 
 .event-card:hover .event-image img {
@@ -152,21 +122,8 @@
   letter-spacing: 0.5px;
 }
 
-/* Special styling for the Live now badge */
-.upcoming-card .event-badge {
-  background: #c01515;
-  color: white;
-  font-weight: 700;
-  padding: 8px 16px;
-  font-size: 14px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.upcoming-card .event-content {
-  padding: 20px;
-  flex: 0 0 auto; /* Prevent content from growing */
-  max-height: 200px; /* Limit the height of content area */
-  overflow: auto; /* Add scrolling if needed */
+.event-content {
+  padding: 24px;
 }
 
 .event-meta {
@@ -214,8 +171,8 @@
   line-height: 1.6;
   margin-bottom: 20px;
   display: -webkit-box;
-  line-clamp: 3;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
