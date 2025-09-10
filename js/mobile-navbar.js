@@ -1,5 +1,4 @@
-// Mobile Navigation JavaScript
-
+ 
 class MobileNavbar {
   constructor() {
     this.mobileNavbar = null;
@@ -11,7 +10,7 @@ class MobileNavbar {
   }
 
   init() {
-    // Wait for DOM to be ready
+    
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => this.setupElements());
     } else {
@@ -20,7 +19,7 @@ class MobileNavbar {
   }
 
   setupElements() {
-    // Get mobile navigation elements
+ 
     this.mobileNavbar = document.getElementById('mobile-navbar');
     this.mobileNavOverlay = document.getElementById('mobile-nav-overlay');
     this.mobileNavToggle = document.getElementById('nav-toggle');
@@ -33,13 +32,13 @@ class MobileNavbar {
   }
 
   bindEvents() {
-    // Toggle mobile navigation
+ 
     this.mobileNavToggle.addEventListener('click', (e) => {
       e.stopPropagation();
       this.toggle();
     });
 
-    // Close mobile navigation
+ 
     if (this.mobileNavClose) {
       this.mobileNavClose.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -47,14 +46,14 @@ class MobileNavbar {
       });
     }
 
-    // Close on overlay click
+ 
     if (this.mobileNavOverlay) {
       this.mobileNavOverlay.addEventListener('click', () => {
         this.close();
       });
     }
 
-    // Close on navigation link click
+     
     const navLinks = this.mobileNavbar.querySelectorAll('.mobile-nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -62,7 +61,7 @@ class MobileNavbar {
       });
     });
 
-    // Close on outside click
+   
     document.addEventListener('click', (e) => {
       if (this.isOpen && 
           !this.mobileNavbar.contains(e.target) && 
@@ -70,22 +69,21 @@ class MobileNavbar {
         this.close();
       }
     });
-
-    // Handle window resize
+ 
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768 && this.isOpen) {
         this.close();
       }
     });
 
-    // Handle escape key
+    
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && this.isOpen) {
         this.close();
       }
     });
 
-    // Prevent body scroll when mobile nav is open
+    
     this.mobileNavbar.addEventListener('wheel', (e) => {
       e.stopPropagation();
     }, { passive: true });
@@ -110,13 +108,13 @@ class MobileNavbar {
       this.mobileNavOverlay.classList.add('active');
     }
 
-    // Prevent body scroll
+     
     document.body.style.overflow = 'hidden';
     
-    // Add animation class
+  
     this.mobileNavbar.style.animation = 'slideInLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
     
-    // Focus management
+   
     this.trapFocus();
   }
 
@@ -131,13 +129,12 @@ class MobileNavbar {
       this.mobileNavOverlay.classList.remove('active');
     }
 
-    // Restore body scroll
+ 
     document.body.style.overflow = '';
-    
-    // Add closing animation
+ 
     this.mobileNavbar.style.animation = 'slideOutLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
     
-    // Remove focus trap
+ 
     this.removeFocusTrap();
   }
 
@@ -149,7 +146,7 @@ class MobileNavbar {
     const firstFocusable = focusableElements[0];
     const lastFocusable = focusableElements[focusableElements.length - 1];
 
-    // Focus the close button initially
+   
     if (this.mobileNavClose) {
       this.mobileNavClose.focus();
     }
@@ -192,7 +189,7 @@ class MobileNavbar {
     });
   }
 
-  // Public method to update active link (useful for SPA-like navigation)
+   
   updateActiveLink(page) {
     const navLinks = this.mobileNavbar.querySelectorAll('.mobile-nav-link');
     navLinks.forEach(link => {
@@ -203,25 +200,25 @@ class MobileNavbar {
     });
   }
 
-  // Public method to check if mobile nav is open
+  
   isNavOpen() {
     return this.isOpen;
   }
 
-  // Public method to destroy the mobile navbar
+   
   destroy() {
     if (this.isOpen) {
       this.close();
     }
     this.removeFocusTrap();
-    // Remove event listeners would go here if needed
+    
   }
 }
 
-// Initialize mobile navbar when script loads
+ 
 let mobileNavbarInstance = null;
 
-// Function to initialize mobile navbar
+ 
 function initializeMobileNavbar() {
   if (!mobileNavbarInstance) {
     mobileNavbarInstance = new MobileNavbar();
@@ -229,14 +226,9 @@ function initializeMobileNavbar() {
   return mobileNavbarInstance;
 }
 
-// Auto-initialize if DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initializeMobileNavbar);
-} else {
-  initializeMobileNavbar();
-}
+ 
 
-// Export for potential use in other scripts
+ 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { MobileNavbar, initializeMobileNavbar };
 }
