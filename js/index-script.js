@@ -296,3 +296,8 @@ window.addEventListener("error", (e) => {
 window.addEventListener("unhandledrejection", (e) => {
   console.error("Unhandled Promise Rejection:", e.reason);
 });
+
+function closeEventPopup() {
+  const popup = document.getElementById("event-popup");
+  popup.classList.remove("active");
+}
