@@ -301,3 +301,11 @@ function closeEventPopup() {
   const popup = document.getElementById("event-popup");
   popup.classList.remove("active");
 }
+// FUTUREPRENEUR POPUP – show on page load
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("event-popup");
+  if (popup) {
+    popup.classList.add("active");
+  }
+});
+
