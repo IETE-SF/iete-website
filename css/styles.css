@@ -1271,3 +1271,54 @@ section {
   height: 100vh; /* Full viewport height for the slider */
 }
 
+/* TechBate 2026 Marquee Banner Styles */
+.techbate-banner-container {
+  position: absolute;
+  top: 70px; /* Aligns directly beneath the fixed 70px navbar */
+  left: 0;
+  width: 100%;
+  background-color: #fcebeb; /* Light background for visibility */
+  padding: 10px 0;
+  z-index: 100;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+}
+
+.techbate-banner-content {
+  display: flex;
+  white-space: nowrap;
+  animation: techbateMarquee 15s linear infinite;
+  /* Keeps the animation continuous without pausing */
+}
+
+@keyframes techbateMarquee {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}
+
+.techbate-banner-text {
+  color: #cc0000; /* Red color */
+  font-weight: 600; /* Slightly bold */
+  font-size: 1.1rem;
+  font-family: var(--font-family);
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.techbate-banner-text:hover {
+  text-decoration: underline;
+  color: #ff0000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .techbate-banner-container {
+    padding: 8px 0;
+  }
+  .techbate-banner-text {
+    font-size: 1rem;
+  }
+}
