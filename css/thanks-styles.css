@@ -1,0 +1,332 @@
+/* Page-specific styles for Thanks page */
+
+/* Loading Screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 16px;
+}
+
+.loading-text {
+  color: var(--text-secondary);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Hero Section - Consistent with main styles */
+.hero-static {
+  background: linear-gradient(135deg, var(--background-light) 0%, var(--border-color) 100%);
+  text-align: center;
+  padding: 120px 0 60px;
+}
+
+.hero-static .hero-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.hero-static .hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* Contributors Section */
+.contributors-section {
+  padding: 80px 0;
+  background: var(--background-white);
+}
+
+.contributors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+  margin-bottom: 80px;
+}
+
+.contributor-card {
+  background: var(--background-white);
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.contributor-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  border-color: var(--border-color-hover);
+}
+
+.contributor-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.contributor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.contributor-card:hover .contributor-image img {
+  transform: scale(1.05);
+}
+
+.contributor-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.8), rgba(var(--accent-rgb), 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contributor-card:hover .contributor-overlay {
+  opacity: 1;
+}
+
+.contributor-overlay .social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.contributor-overlay .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-md);
+  color: var(--background-white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.contributor-overlay .social-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.contributor-info {
+  padding: 32px;
+}
+
+.contributor-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.contributor-role {
+  font-size: 16px;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.contributor-description {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contributor-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+  color: var(--primary-dark);
+  padding: 6px 12px;
+  border-radius: var(--border-radius-lg);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Appreciation Section */
+.appreciation-section {
+  margin-top: 80px;
+}
+
+.appreciation-card {
+  background: linear-gradient(135deg, var(--background-light), var(--border-color));
+  border-radius: 24px;
+  padding: 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.appreciation-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.05), rgba(var(--accent-rgb), 0.05));
+  pointer-events: none;
+}
+
+.appreciation-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background-white);
+  margin: 0 auto 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.appreciation-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.appreciation-text {
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.appreciation-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-static {
+    padding: 100px 0 40px;
+  }
+  .hero-static .hero-title {
+    font-size: 36px;
+  }
+  .hero-static .hero-subtitle {
+    font-size: 18px;
+  }
+  .contributors-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .appreciation-card {
+    padding: 32px 24px;
+  }
+  .appreciation-title {
+    font-size: 24px;
+  }
+  .appreciation-text {
+    font-size: 16px;
+  }
+  .appreciation-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-static {
+    padding: 80px 0 30px;
+  }
+  .hero-static .hero-title {
+    font-size: 28px;
+  }
+  .hero-static .hero-subtitle {
+    font-size: 16px;
+  }
+  .contributors-section {
+    padding: 60px 0;
+  }
+  .contributor-info {
+    padding: 24px 20px;
+  }
+  .appreciation-card {
+    padding: 24px 16px;
+  }
+  .appreciation-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Animations */
+.appreciation-icon {
+  animation: pulse 2s ease-in-out infinite;
+}
