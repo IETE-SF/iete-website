@@ -15,6 +15,7 @@
   
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/mobile-navbar.css">
+  <link rel="stylesheet" href="./css/crossword-popup.css">
   
   <title>IETE-SF KCCEMSR | Student Forum</title>
   <link rel="icon" href="asssets/iete_logo-removebg.png" type="image/x-icon">
@@ -31,13 +32,7 @@
   <div id="navbar-placeholder"></div>
   <div id="mobile-navbar-placeholder"></div>
 
-  <!-- TechBate 2026 Marquee Banner -->
-  <div class="techbate-banner-container">
-    <div class="techbate-banner-content">
-      <!-- Replace '#' with your actual registration form link -->
-      <a href="https://forms.gle/ascbDYHjiLtSm4PA9" target="_blank" class="techbate-banner-text">Register for TechBate 2026 here</a>
-    </div>
-  </div>
+
 
   <div class="hero-layout-container">
 
@@ -444,6 +439,37 @@
           });
       });
   </script>
+
+  <!-- ===== Crossword Solution Floating Popup ===== -->
+  <div id="crossword-popup" role="complementary" aria-label="Crossword Solution">
+    <button id="crossword-close-btn" aria-label="Dismiss crossword popup" title="Dismiss">&#x2715;</button>
+    <a id="crossword-card"
+       href="./asssets/Crossword-answers.pdf"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Open crossword answers PDF in a new tab">
+      <span class="crossword-icon">&#x1F9E9;</span>
+      <div class="crossword-text">
+        <span class="crossword-title">Crossword Solution</span>
+        <span class="crossword-subtitle">Click here to view the crossword answers</span>
+      </div>
+      <span class="crossword-arrow">&#x2192;</span>
+    </a>
+  </div>
+
+  <script>
+    (function () {
+      var popup = document.getElementById('crossword-popup');
+      var closeBtn = document.getElementById('crossword-close-btn');
+      if (closeBtn && popup) {
+        closeBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          popup.classList.add('crossword-hidden');
+        });
+      }
+    })();
+  </script>
+
 </body>
 
 </html>
